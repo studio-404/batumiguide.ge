@@ -1,0 +1,93 @@
+.g-select-wrap{
+	margin: 0;
+	padding: 0;
+	width: 600px;
+	position: relative;
+	float: left;
+}
+
+.g-select-wrap .g-select-show{
+	margin: 0;
+	padding: 0 25px 0 5px;
+	width: 200px;
+	height: 25px;	
+	line-height: 25px;
+	background-color: #ffffff;
+	border: solid 1px #cccccc;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+
+.g-select-wrap .g-select-show:after{
+	content: '';
+	width: 12px;
+	height: 12px;
+	background-image: url('../img/arrow.png');
+	position: absolute;
+	right: 5px;
+	top: 7px;
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.flipAfter:after{
+	transform: rotate(180deg);
+}
+
+.g-select-wrap .g-select-list{
+	margin: 0;
+	padding: 5px;
+	width: 100%;
+	position: absolute;
+	top: 26px;
+	width: 222px;
+	left: 0px;
+	background-color: #cccccc;
+	z-index: 1000;
+	display: none;
+}
+
+.g-select-wrap .g-select-list .g-select-search{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.g-select-wrap .g-select-list .g-select-search input[type='text']{
+	margin: 0;
+	padding: 0 5px;
+	height: 25px;
+	line-height: 25px;
+	width: calc(100% - 10px);
+	border: 0;
+}
+
+.g-select-wrap .g-select-list .select-results{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	max-height: 100px;
+	overflow-y: auto;
+}
+
+.g-select-wrap .g-select-list .select-results label{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	display: block;
+	line-height: 25px;
+	font-size: 12px;
+	color: #555555;
+	border-top: solid 1px #cccccc;
+	cursor: pointer;
+}
+
+.g-select-wrap .g-select-list .select-results label:first-child{
+	border-top: none;
+}
+
+.g-select-wrap .g-select-list .select-results label input[type='checkbox']{
+	width: 20px;
+}

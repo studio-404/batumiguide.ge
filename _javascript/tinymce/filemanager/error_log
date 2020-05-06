@@ -1,0 +1,34 @@
+[30-Jul-2019 12:33:38 Asia/Tbilisi] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../../files/64.jpg is missing or invalid' in /home2/batumiguide/public_html/_javascript/tinymce/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home2/batumiguide/public_html/_javascript/tinymce/filemanager/include/utils.php(57): imageLib->resizeImage(122, 91, 'crop')
+#1 /home2/batumiguide/public_html/_javascript/tinymce/filemanager/upload.php(97): create_img('../../../files/...', '../../../files/...', 122, 91)
+#2 {main}
+  thrown in /home2/batumiguide/public_html/_javascript/tinymce/filemanager/include/php_image_magician.php on line 325
+[30-Jul-2019 12:36:18 Asia/Tbilisi] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../../files/64.jpg is missing or invalid' in /home2/batumiguide/public_html/_javascript/tinymce/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home2/batumiguide/public_html/_javascript/tinymce/filemanager/include/utils.php(57): imageLib->resizeImage(122, 91, 'crop')
+#1 /home2/batumiguide/public_html/_javascript/tinymce/filemanager/upload.php(97): create_img('../../../files/...', '../../../files/...', 122, 91)
+#2 {main}
+  thrown in /home2/batumiguide/public_html/_javascript/tinymce/filemanager/include/php_image_magician.php on line 325
+[05-Aug-2019 15:32:01 Asia/Tbilisi] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../../files/poster-384807.jpg is missing or invalid' in /home2/batumiguide/public_html/_javascript/tinymce/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home2/batumiguide/public_html/_javascript/tinymce/filemanager/include/utils.php(57): imageLib->resizeImage(122, 91, 'crop')
+#1 /home2/batumiguide/public_html/_javascript/tinymce/filemanager/upload.php(97): create_img('../../../files/...', '../../../files/...', 122, 91)
+#2 {main}
+  thrown in /home2/batumiguide/public_html/_javascript/tinymce/filemanager/include/php_image_magician.php on line 325
+[19-Oct-2019 14:11:48 Asia/Tbilisi] PHP Warning:  chmod(): No such file or directory in /home2/batumiguide/public_html/_javascript/tinymce/filemanager/upload.php on line 90
+[05-Nov-2019 15:40:10 Asia/Tbilisi] PHP Warning:  chmod(): No such file or directory in /home2/batumiguide/public_html/_javascript/tinymce/filemanager/upload.php on line 90
+[06-Nov-2019 13:15:05 Asia/Tbilisi] PHP Warning:  chmod(): No such file or directory in /home2/batumiguide/public_html/_javascript/tinymce/filemanager/upload.php on line 90
+[04-Dec-2019 15:42:53 Asia/Tbilisi] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../../files/events/Batumi Drama Theater/poster-390005.jpg is missing or invalid' in /home2/batumiguide/public_html/_javascript/tinymce/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home2/batumiguide/public_html/_javascript/tinymce/filemanager/include/utils.php(57): imageLib->resizeImage(122, 91, 'crop')
+#1 /home2/batumiguide/public_html/_javascript/tinymce/filemanager/upload.php(97): create_img('../../../files/...', '../../../files/...', 122, 91)
+#2 {main}
+  thrown in /home2/batumiguide/public_html/_javascript/tinymce/filemanager/include/php_image_magician.php on line 325
+[04-Dec-2019 15:43:24 Asia/Tbilisi] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../../files/events/Batumi Drama Theater/poster-390005.jpg is missing or invalid' in /home2/batumiguide/public_html/_javascript/tinymce/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home2/batumiguide/public_html/_javascript/tinymce/filemanager/include/utils.php(57): imageLib->resizeImage(122, 91, 'crop')
+#1 /home2/batumiguide/public_html/_javascript/tinymce/filemanager/upload.php(97): create_img('../../../files/...', '../../../files/...', 122, 91)
+#2 {main}
+  thrown in /home2/batumiguide/public_html/_javascript/tinymce/filemanager/include/php_image_magician.php on line 325
+[03-Feb-2020 15:45:36 Asia/Tbilisi] PHP Warning:  chmod(): No such file or directory in /home2/batumiguide/public_html/_javascript/tinymce/filemanager/upload.php on line 90
