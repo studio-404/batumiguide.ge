@@ -1,0 +1,20 @@
+
+
+@font-face {
+    font-family: 'BPG110';
+    src: url('../fonts/BPG_110.eot');
+    src: local('☺'), url('../fonts/BPG_110.woff') format('woff'), 
+    url('../fonts/BPG_110.ttf') format('truetype'), 
+    url('../fonts/BPG_110.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BPG110Caps';
+    src: url('../fonts/BPG_110_Caps.eot');
+    src: local('☺'), url('../fonts/BPG_110_Caps.woff') format('woff'), 
+    url('../fonts/BPG_110_Caps.ttf') format('truetype'), 
+    url('../fonts/BPG_110_Caps.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

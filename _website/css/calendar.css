@@ -1,0 +1,96 @@
+
+.ui-datepicker .ui-datepicker-header {
+    position: relative;
+    padding: .2em 0;
+    background: none;
+    border: none;
+}
+.ui-widget.ui-widget-content {
+	border:none;
+	padding:15px;
+}
+.ui-datepicker-calendar th{	color:#999999;}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+	border:none !important;
+	background:none;
+	font-family:BPG110Caps;
+	font-size:12px;    padding: 6px 6px 5px 5px;
+	text-align:center;
+	border-radius:100%;	color:#666666;
+}.ui-widget-content a.ui-state-active{	color:#fff !important}
+.ui-state-active {
+	 background:#ff353c !important
+ }
+.ui-widget-content .ui-state-default:hover,
+.ui-state-default.ui-state-highlight.ui-state-active{
+	background:#ff353c;
+	color:#fff;
+}
+
+.ui-datepicker-next { 
+	border-radius:100%;
+	position:relative;
+	border:none;
+}
+.ui-datepicker-next span {
+	display:none !important;
+}
+.ui-datepicker-next:after {
+	content: "\f105";
+	font-family: FontAwesome;
+    position: absolute;
+    left: 43%;
+    top: 9%;
+	color:#000;
+}
+.ui-datepicker-next:hover,
+.ui-datepicker-next:focus {
+	background:#ffd400;
+	border:none;
+	cursor:pointer;
+}
+.ui-datepicker-next:hover:after {
+	color:#fff;
+}
+
+
+
+.ui-datepicker-prev { 
+	border-radius:100%;
+	position:relative;
+	border:none;
+}
+.ui-datepicker-prev span {
+	display:none !important;
+}
+.ui-datepicker-prev:after {
+	content: "\f104";
+	font-family: FontAwesome;
+    position: absolute;
+    left: 43%;
+    top: 9%;
+	color:#000;
+}
+.ui-datepicker-prev:hover,
+.ui-datepicker-prev:focus {
+	background:#ffd400;
+	border:none;
+	cursor:pointer;
+}
+.ui-datepicker-prev:hover:after {
+	color:#fff;
+}
+
+.ui-datepicker-title {
+ 
+	font-family:BPG110Caps;
+	text-transform:uppercase;
+	color:#000000;
+}
+.ui-datepicker th {
+    padding: 1.7em .3em;
+    text-align: center;
+    font-weight: bold;
+    border: 0;	font-family:BPG110Caps;
+}

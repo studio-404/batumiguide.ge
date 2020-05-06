@@ -1,0 +1,20 @@
+Array
+(
+    [type] => searchMap
+    [c] => 3
+    [a] => 0
+    [q] => 
+    [g_date] => 26-02-2019 02:38:16
+    [g_url] => http://batumiguide.ge/ge/?ajax=true
+    [g_ip] => 5.178.226.226
+)
+Array
+(
+    [dd_login] => 1
+    [username] => ddadmin
+    [password] => 123
+    [perform] => Sign In
+    [g_date] => 27-02-2019 12:47:44
+    [g_url] => http://batumiguide.ge/ge/badmin/access/login
+    [g_ip] => 94.240.245.46
+)

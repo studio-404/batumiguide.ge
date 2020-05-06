@@ -1,0 +1,1974 @@
+@media (max-width:992px) {
+	
+	.HeaderWidthRight {
+		display:none;
+	}
+	
+	.HeaderDiv {
+		padding-top:0;
+		padding-bottom:0 !important;
+		background:#fff;
+	}
+	.container {
+		width:100%;
+	}
+	.HeaderDiv .container {
+		padding:0;
+	}
+	
+	.HeaderDivForMobile {
+		position:relative;
+		height:60px;
+		border-bottom:solid #ff4f56 1px;
+	}
+	.HeaderDiv a.Logo {
+		height: 40px;
+		background-size: auto 100%;
+		margin-top: 10px;
+		margin-left: 15px;
+	}
+	 
+	
+	.MenuBackground {
+		overflow:hidden; 
+	}
+	.MenuBackground:after {
+		content:'';
+		width:100%;
+		height:100%;
+		background:rgba(0,0,0,0.7);
+		position:absolute;
+		left:0;
+		top:60px;
+	}
+ 
+	.HeaderDiv .HeaderUser .UserHeadMenu button {
+		margin-right:-5px;
+	}
+
+	.HeaderDiv .HeaderUser .UserHeadMenu button:after {
+		display:none;
+	}
+	.HeaderMenu {
+		width:100%;
+	    background:#fff;
+	    position: absolute;
+	    left:0;
+ 	    top:-420px;
+ 	    z-index:99999999;  
+	}
+	.ShowHeaderMenu.HeaderMenu {
+  		top:5px;
+	}
+	.HeaderMenu li {
+	    display: block;
+ 	    width:100%;
+  		text-align:left;
+		background:#fff;
+		margin-left: 55px;
+	}
+	.HeaderMenu li a {
+		color:#000;
+		font-weight:normal;
+		height:60px;
+		line-height:60px;
+		border-bottom:solid #f1f4f6 1px;
+		width:100%;
+	}
+	.ContainerPaddingLeft {
+		padding:15px;
+	}
+	.HeaderDiv .ContainerPaddingLeft {
+		padding-bottom:3px;
+	}
+	.HeaderIconMenu {
+		margin-top:15px;
+	}
+	.HamburgMenu {
+		position: absolute;
+		top: 20px;
+		right: 15px;
+		width: 25px;
+		height: 10px;
+		z-index: 9999; 
+		border-top: solid #000 2px;
+	}
+	.HamburgMenu:after {
+		content:'';
+		width:25px;
+		height:2px;
+		background:#000;
+		position: absolute;
+    	left: 0;
+    	top: 6px;
+	}
+	.HamburgMenu:before {
+		content:'';
+		width:25px;
+		height:2px;
+		background:#000;
+		position: absolute;
+    	left: 0;
+    	top: 14px;
+	}
+
+	.HideMobile {
+		display:none;
+	}
+	.HeaderDiv .dropdown-menu {
+		left:-61px;
+		width:100px;
+	}
+	.HeaderDiv .HeaderUser .UserHeadImg, .HeaderDiv .HeaderUser .UserHeadImg img {
+		display:none;
+	} 
+	.UserHeadMenu {
+		color:red;
+		margin-top:4px;
+	}
+	.UserHeadMenu .fa {
+		color:#000;
+
+	}
+	.HeaderTitle {
+		display:none;
+	}
+	.HeaderFilter .CategoriesSelect {
+		display:none
+	}
+	.HeaderIconMenu {
+		width:110%;
+	}
+	.HeaderIconMenu .Item {
+		margin-right:14px;
+		margin-bottom: 12px;
+		height: 95px !important;
+	}
+	.HeaderIconMenu .MenuTitle {
+		display:none;
+	}
+	.HeaderRightLinks {
+		display:none;
+	}
+	.HeaderDiv .col-sm-6 {
+		padding:0;
+	}
+	.HeaderInput {
+		margin-left:-5px;
+	}
+
+	/*
+	.HeaderIconMenu .Item:nth-child(5),
+	.HeaderIconMenu .Item:nth-child(6),
+	.HeaderIconMenu .Item:nth-child(7),
+	.HeaderIconMenu .Item:nth-child(8) {
+		display:none
+	}
+	*/
+	/* HOME PAGE */
+	.HomePageDiv .ContainerPadding {padding:0;}
+
+	.CategoriesDiv .col-sm-2 {
+		width:100%
+	}
+
+	
+	.PageTitle {
+		margin-top:15px;
+		margin-bottom:10px;
+	}
+	.PageTitle label {
+		font-size:16px;
+	}
+	.PageTitle span {
+		display:none;
+	} 
+
+
+	.HomePartnetIcons .ContainerPadding {
+		padding:0 15px;
+	}
+	.HomePartnetIcons .col-sm-2 .Image {
+		height:40px;
+		line-height:40px;
+	}
+	.HomePartnetIcons .col-sm-2 .Image img {
+		max-height:40px;
+	}
+	.HomePartnetIcons .slick-slide img {
+		display:inline-block;
+	}
+
+	.FooterDiv {
+		padding-top:40px;
+		padding-bottom:15px;
+		font-size:13px;
+	}
+	.CopyRight {
+	    position: absolute;
+    	bottom: -19px;
+		left: 0;
+	}
+	.FooterSocial {
+		position: absolute;
+		top: -29px;
+		left: -3px;
+	}
+	.PowerBy {
+		margin-right:-15px;
+	}
+
+	.slick-dots {
+		right:15px;
+	}
+
+	.SmallHeaderInside {
+		max-height:100% !important;
+	}
+
+	.CategoryTitle {
+		width:100%;
+	}
+	.CategoryTitle .col-sm-12 {
+		padding-left:0
+	}
+
+	.HeaderWidthRight {
+		width:100%; 
+		top:0;
+	}
+	.HeaderWidthRight {
+		margin-right:0;
+	}
+	.HeaderWidthRight .col-sm-2 {
+		width:100%;
+		margin-top:15px;
+	}
+	.ColSm111 {
+		width:calc(100% - 100px) !important;
+		padding-left:0; 
+		position:relative;
+		left:-3px;
+		float:left;
+	}
+	.ColSm222 {
+		width:50px;
+		float:right !important;
+	} 
+
+
+
+	.CategoriesPage {
+		padding-top:0px;
+	}
+	.CategoriesPage .SidebarCategories {
+		width:100%;
+	}
+	.SidebarCategories .col-sm-12 {
+		padding:0;
+	}
+	.CategoriesPage .SidebarCategories .HeaderIconMenu .Item {
+		display:inline-block;
+	}
+	.CategoriesDiv .col-sm-2 {
+		 
+		padding-left: 5px;
+    	padding-right: 5px;
+	}
+	.CategoriesDiv .col-sm-3 {
+		width:50% !important;
+		float:left;
+		padding-left: 5px;
+    	padding-right: 5px;
+	}
+	.CategoriesPage .CategoriesDiv {
+		width:100%;
+		padding-left:10px;
+		padding-right:10px;
+	}
+	.CategoriesDiv .Info {
+		padding:10px 10px 15px 10px;
+		height:auto;
+	}
+	.CategoriesDiv .Info .Title {
+		height:auto;
+	}
+	.CategoriesDiv .Item {
+		margin-bottom:20px;
+	}
+	.CategoriesDiv .Item .Image {
+		height:215px;
+	}
+	.CategoriesDiv .Item img {
+		height:215px;
+	}
+	.GaqvtKitxvebi {
+		margin-top:30px;
+	}
+	a.Dagvekontaqtet {
+		margin-top:20px
+	}
+
+	.ContactPage .ContactDiv .ContactInfo {
+		padding-left:15px;
+		padding-right:15px;
+	}
+	.ContactTitle {
+		font-size: 20px;
+		margin-bottom: 0;
+	}
+	.InfoListContact {
+		margin-bottom:0px;
+	}
+	.InfoListContact li {
+		margin-bottom:15px;
+	}
+	.InfoListContact li label {
+		font-size:15px;
+	}
+
+	.SmallHeaderInside .container .col-sm-12 {
+		padding:0;
+	}
+	.UserProfilePage .container {
+		padding:0;
+	}
+	.UserProfilePage .UserSidebarDiv {
+		width:100%;
+	}
+	.UserRightDiv {
+		width:100%;
+		padding-left:0;
+	}
+
+
+	.UserRightDiv .UserForm {
+		top:0px;
+		margin-top:20px;
+		padding-top:20px;
+	}
+	.UserImageChange {
+		display:inline-block;
+	}
+	.ErrorInputMessage {
+		position: relative;
+	    left: 0;
+	    top: 0;
+	    margin-top: 20px;
+	}
+	.ErrorInputMessage:after {
+		content:'';
+		position:absolute;
+		top:-16px;
+		left:calc(50% - 8px); 
+		border-left: 8px solid transparent;
+		border-right: 8px solid transparent;  
+		border-bottom: 8px solid #ff3544;
+	}
+
+
+	.EventPage .EventSidebar {
+		width:100%;
+	}
+	.EventPage .EventDiv {
+		width:100%;
+		padding-left:0;
+	}
+	.ListStyleEvent .EventItem {
+		width:100%;
+	}
+
+	.EventPage .col-sm-12 {
+		padding:0;
+	}
+
+
+	.ChangeEventStructure  {
+		display:none;
+	}
+	.EventHeader {
+		padding-top:0;
+	}
+	.EventItem {
+		background:#fff; 
+		text-align:center;
+		margin-bottom:20px;
+	} 
+	.AllEventsDiv .EventItem:after,
+	.AllEventsDiv .EventItem:before {
+		display:none !important
+	}
+	.EventItem .TitleAndCategory {
+		width:100%;
+		padding-left:0	
+	}
+	.EventItem .Image {
+		position:relative;
+		left:50%;
+		margin-left:-70px;
+		width:140px;
+		height:140px;
+	}
+	.EventItem .TicketButton {
+
+	}
+	.EventItem .DateAndAddress {
+		width:100%;
+	}
+	.EventItem .TicketButton {
+		position:relative;
+		left:50%;
+		margin-left:-60px;
+		float:left;
+	}
+	.EventItem .TitleAndCategory label {
+		height:50px;
+	}
+
+	
+	
+	.ForTopBackground,
+	.ForBottomBackground {
+		display:none;
+	}
+	.HomeEventsDiv {
+		padding-right:0;
+		margin-bottom:0px;
+		background:none;
+	}
+	.HomeEventItem {
+		background:#fff; 
+		margin-bottom:12px;
+		padding:12px 0
+	}
+	.HomeEventItem:hover,
+	.HomeEventItem:focus {
+		background:#ff353c;
+	}
+	.AllEventsDiv .HomeEventItem:after,
+	.AllEventsDiv .HomeEventItem:before {
+		display:none !important
+	}
+	.HomeEventItem .TitleAndCategory {
+		width: auto;
+		padding-left: 0;
+		padding-left: 15px; 
+		width: 228px;
+		text-align: left;
+	}
+	.HomeEventItem .Image {
+		position:relative;
+		left:0;
+		margin-left:12px;
+		width:70px;
+		height:70px;
+	}
+	.HomeEventItem .TicketButton {
+
+	}
+	.HomeEventItem .DateAndAddress {
+		width: calc(100% - 103px);
+		padding-top:0px;
+		margin-bottom: 8px;
+		padding-left: 14px;
+	}
+	.HomeEventItem .TicketButton {
+		position: absolute;
+		left: 0;
+		float: left;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		border-radius:0;
+		opacity:0
+	}
+	.HomeEventItem .TitleAndCategory label {		 
+		 
+	}
+	
+	.HomeSmallPartners {
+		margin-top:-21px;
+	}
+	.HomeSmallPartners .Image {
+		margin:0
+	}
+	
+	
+	.ui-widget.ui-widget-content {
+		width:100%;
+	}
+	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+		padding: 11px;
+	}
+
+
+	.ColSm333 {
+		width:calc(100% - 80px) !important;
+	}
+
+	.BatumiGuideSelectBlue {
+		height:50px;
+		border-radius:30px;
+	    background: #268de5;
+   		border: solid #429ce8 1px;
+   		color:#fff;
+		font-family:BPGMrgvlovani;
+		padding-left:15px;
+	}
+
+
+	.SimilarDots {
+		width:100%;
+	}
+	.DescriptionHeader .DescHeader {		
+		display: inline-block;
+		left: 0;
+		float: left;
+		width: 100%;
+	}
+	.DescriptionHeader .slick-dots {
+		right: 0;
+		top: calc(100% - 22px);
+		width: 100%;
+		text-align: center;
+		padding-left: 0;
+	}
+	.DescriptionHeader .slick-dots li button {
+		background:#dbdedf;
+		width:8px;
+		height:8px;
+	}
+	.DescriptionHeader .slick-dots li.slick-active button {
+		background:#fff;
+		width:10px;
+		height:10px;
+	}
+	.DescriptionHeader .slick-vertical .slick-slide {
+		border:none;
+	}
+	.DescriptionHeader .DescHeader .ImageBg {
+		height:240px;
+	}
+	.DescriptionHeader {
+		height:240px;
+	}
+	.CategoriesDiv .col-sm-2 {
+		padding:0
+	}
+	.SimilarObjects {
+		padding-top:20px;
+		padding-bottom:0
+	}
+	.DescriptionContent {
+ 		padding-right:0 !important;
+		padding-bottom:0
+	}
+	.DescriptionContent .col-sm-12 {
+		padding-left:0;
+		padding-right:0
+	}
+	.SimilarObjects .DivTitle {
+		font-size:15px;
+		font-weight:normal;
+		margin-bottom:16px;
+	}
+	.SimilarObjects .col-sm-6 {
+		padding-left:0;
+		padding-right:0;
+	}
+	.SimilarObjects .ArrowsDiv {
+		display:none;
+	}
+	.SimilarObjects .col-sm-6 {
+		width:50%;
+		display:inline-block;
+		float:left;
+	}
+	.DescInfo {
+		width:100%;
+	}
+	.DescriptionSidebar {
+		position: static !important;
+		margin-bottom: 50px !important;
+		margin-left: 0 !important;
+		max-width: 100% !important;
+		display: block;
+	}
+
+	.g-margin-top50-desc{
+		margin-top: 0 !important;
+	}
+	
+	.CompanyInfo {
+		width:100%;
+		padding-left:0;
+	}
+	.CompanyInfo .col-sm-12 {
+		padding:0;
+	}
+	.DescriptionHeader .container {
+		padding:0;
+	}
+
+	
+	
+	.DescHeadInfo {
+		display: inline-block;
+		width: 100%;
+		position: relative;
+		bottom:6px;
+	}
+	.DescriptionHead2 .col-sm-12 {
+		padding-left:0;
+		padding-right:0
+	}
+	.DescHeadInfo .LogoImage {
+		width: 90px;
+		height: 90px;
+		position: absolute;
+		right: 0;
+		top: -61px;
+	}
+	.DescHeadInfo .LogoImage img {
+		 width:100%;
+	}
+	.CompanyInfoList li {
+		max-width: 100%;
+		width: 100% !important;
+		color:#000
+	}
+	.CompanyInfo .CompanyTitle span {
+		color:#505050;
+		font-style:normal; 
+	}
+	.CompanyInfo .CompanyTitle label {
+		color:#000;
+		margin-top:10px;
+	}
+	.CompanyInfoList li {
+		margin-bottom:0 !important
+	}
+	.CompanyInfoList li span {
+		text-align:left;		
+		font-size: 18px;
+		text-align: center !important;
+		min-width:22px;
+		width:22px;
+	}
+	
+	
+
+
+	.CompanySocial {
+		padding-left:0;
+	}
+
+	.DescriptionHead2 {
+		padding-bottom:22px;
+		padding-top:18px;
+	}
+	.DescriptionHead2 .container {
+		padding:0;
+	}
+	.HeaderDiv .HeaderUser .LoginButton {
+		width:30px;
+		height:30px;
+		top:-5px;
+		background:#4b9eef url('../img/login_button.png') no-repeat center center;
+	}
+
+
+
+
+
+	.CompanyInfoList li {
+		margin-right:5px;
+		font-size:12px;
+		width:165px;
+		margin-bottom:13px;
+	}
+
+	.RatingDIv {
+		position:relative;
+		bottom:0;
+	}
+	.DescriptionContent {
+		width:100%;
+		padding-right: 15px;
+		padding-top:20px;
+	}
+	.DescriptionContent .container {
+		width:100%;
+	}
+	.DescriptionPaddingLeft {
+		padding-left:15px;
+	}
+	.DescInfo .Name {
+	    position: relative;
+	    left: 0;
+	    text-align: left;
+	    top: -20px;
+	}
+	.DescInfo .DescPriceBoxs {
+		margin-top:20px;
+	}
+	.DescInfo .DescInfoList {
+	    width: 100%;
+	    margin-top: 0;
+	    display: inline-block;
+	}
+	
+	.GalleryBoxSlider {
+		display: inline-block;
+		width: calc(100% + 30px);
+	}
+	.DescGalleryBoxs .Item {
+		width: calc(50% - 25px);
+		height: 100px;
+		margin-bottom:18px;
+	}
+	.DescButtons .Button11 {
+		font-size:13px;
+		font-weight:normal;
+		margin-right:10px;
+	}
+	.DescInfo .TagsDiv .Tag {
+		margin-right:10px;
+		padding: 8px 14px;
+		font-weight:normal
+	}
+
+	.DescriptionPaddingLeft {
+		padding-left:0;
+	}
+	.DescButtons  {
+		margin-top:0px;
+	}
+	.DescInfo .TagsDiv {
+		padding-top:10px;
+		margin-top:25px;
+	}
+	
+	.DescGalleryBoxs {
+		margin-top:0;
+	}
+	.DescInfo .Title {
+		font-size:17px;
+		font-weight:normal;
+		margin-bottom:15px;
+	} 
+	.DescInfo .DescPriceBoxs .Item .BoxTitle {
+		display:inline-block;
+	}
+	.DescInfo .DescPriceBoxs .Item {
+		width: calc(50% - 23px);
+		margin-bottom: 20px;
+		float: left;
+		display: inline-block;
+	}
+
+	.PriceBoxSlider {
+		display: inline-block;
+		width: calc(100% + 30px);
+	}
+	.DescInfo .TagsDiv .Tag {
+		display:inline-block;
+		margin-bottom:10px;
+	}
+
+	.CompanyNews {
+		padding-left:15px;
+		width:100%;
+	}
+
+	.DivForCompanyMap {
+		display:inline-block;
+		width:100%;
+		height:250px;
+		padding-left:15px;
+		margin-top:30px;
+	}
+	.DivForCompanyMap .InsideMapDiv {
+		display:inline-block;
+		width:100%;
+		height:250px; 
+	}
+
+	.DescriptionSidebar {
+		position:relative;
+		left:calc(50% - 106px);
+	}
+	.DescriptionSidebar .InsidePartnetIcons {
+		top:20px;
+	}
+
+
+	.DescriptionHead2 .EventTime {
+		width:100%;
+		display:inline-block;
+	}
+	.DescriptionHead2 .EventTime .Round_l {
+		display:none;
+	}
+	.DescriptionHead2 .TimeInfo {
+    	width: calc(100% - 51px);
+    	padding-top:0;
+		padding-left:2px;
+	}
+	.DescriptionHead2 .TimeInfo .fa {
+		font-size: 18px;
+		margin-right:10px; 
+	}
+	.DescriptionHead2 .TimeInfo label {
+		display:none;
+	}
+	.DescriptionHead2 .PayMethods {
+		text-align:left;
+		margin-top:12px;
+		padding-left:2px;
+	}
+
+	.RatingDIv {
+		width:calc(100% - 30px);
+		left:15px;
+		margin-top:30px;
+	}
+	
+	
+	
+	.HomeEventSlider {
+		right:0;
+		width:100%;
+		margin-top:20px;
+	}
+	.HomeEventSlider .Item .Info {
+		padding:10px 10px 14px 75px;
+	}
+	.HomeEventSlider .Item .Info .Date {
+		width:60px;
+		height:60px;
+	}
+	.HomeEventSlider .Item .Info .Date label {
+		top:5px;
+		font-size:23px;
+	}
+	.HomeEventSlider .Item .Info .Date span {
+		top:-4px;
+	}
+	.TicketButton2 {
+		padding: 10px 20px;
+		font-size:12px;
+	}
+
+
+	/**********************************************************************/
+	/**********************************************************************/
+	/**********************************************************************/
+
+	.HomePageDiv {}
+	.HomePageDiv .container {
+		padding:0;
+		width:100%;
+	}
+	.HomeBigEvent .Item .Image {
+		height: 215px;
+	}
+	.HomeBigEvent .Item .Info {
+		padding:12px 21px 21px 11px;
+	}
+	.HomeBigEvent .Item .Info .Date {
+	    width: 50px;
+	    height: 50px;
+	    padding-top:8px;
+	}
+	.HomeBigEvent .Item .Info .Date label {
+		font-size:12px;
+	}
+	.HomeBigEvent .Item .Info .Date span {
+		font-size:12px;
+	}
+	.HomeBigEvent .Item .Info .Title {
+	    font-size: 15px;
+	    width: calc(100% - 52px);
+	    padding-left: 12px;
+	    padding-top: 5px;
+	}
+	.HomeBigEvent .Item .Info .Text {
+	    margin-left: 26px;
+	    padding-left:34px;
+	    width: calc(100% - 22px); 
+	}
+	.HomeBigEvent .Item .Info .Address {
+   	 padding-left: 62px;
+		background-position: 21px;
+	}
+	.HomePageDiv {
+		margin-top:22px;
+	}
+	.HomeBigEvent .HeadTitle  {
+		font-size: 16px;
+		color: #000;
+		font-family: BPG110Caps;
+		display:inline-block;
+		width:100%;
+		margin-bottom:18px;
+	}
+	.HomeEventsDiv .Head {
+		display:none;
+	}
+	.HomeEventsDiv .EventsList .Item .Image img {
+		margin-left:5px;
+	}
+	.HomeEventsDiv .EventsList .col-sm-12 {
+		padding-right:0;
+		padding-left:25px;
+	}
+	.HomeEventsDiv .EventsList .Item {
+		display:none !important;
+		margin-top:15px;
+		height:95px;
+	}
+	.HomeEventsDiv .EventsList .Item:nth-child(1){
+		display:inline-flex !important;
+	}
+	.HomeEventsDiv .EventsList .Item .Image {
+		height:56px;
+		width:56px;
+		margin-left:-30px;
+	}
+	.HomeEventsDiv .EventsList .Item .MoreButton {
+		display:none;
+	}
+	.HomeEventsDiv .EventsList .Item .Info {
+		padding-left:15px;
+		width: calc(100% - 25px);
+	}
+	.HomeEventsDiv .EventsList .Item .Info label {
+		margin-bottom:10px;
+	}
+	.HomeEventsDiv {
+		margin-top:15px;
+	}
+	.EventSlideControl .Dots,
+	.EventSlideControl .PrevArrow,
+	.EventSlideControl .NextArrow  {
+		display:none !important;
+	}
+	.EventSlideControl {
+		padding-right:0px;
+		padding-left: 25px;
+	}
+	.MobileAllEvents {
+		display:inline-flex;
+		align-items:center;
+		width:100%;
+		height:50px;
+		background:#fff;
+		padding-left:12px;
+		text-decoration:none;
+	}
+	.MobileAllEvents .Icon {
+	    width: 30px;
+	    height: 30px;
+	    text-align: center;
+	    line-height: 30px;
+	    background: #e8ebed;
+	    border-radius: 100%;
+	    color: #fff;
+	    font-size: 22px;
+	    transition: 0.3s;
+	}
+	.MobileAllEvents span {
+ 	    color: #000;
+	    font-size: 13px;
+	    font-family: BPG110Caps;
+	    font-weight: normal;
+	    opacity: 0.8;
+	    width: 50%;
+	    padding-left: 15px;
+	    opacity: 0.6;
+	}
+	.HomeEventsDiv .EventsList {
+		padding-bottom:25px;
+	}
+	
+	
+	
+	.MobileTItle1 {
+		margin-top:45px;
+	}
+	
+	 
+	.AllEventsDiv .row {
+		padding-left:15px;
+	}
+	
+	
+	
+	.HomeLogosSlide .HomeLogosArrow {
+		display:none;
+	}
+	.HomeLogosSlide {
+		padding-top:15px;
+		padding-bottom:15px;
+	}
+	
+	.HomeLogosSlide .col-sm-2 {
+		padding-left:5px;
+		padding-right:5px;
+	}
+	.HomeLogosSlide .container {
+		padding-left:10px;
+		padding-right:10px;
+	}
+	.HomeLogosSlide .Item {
+		height:40px;
+	}
+	.HomeLogosSlide .Item img {
+		max-width:80%;
+		max-height:80%;
+	}
+	.FooterSocial {
+		top: -42px;
+	}
+	.FooterSocial a {
+		font-size:12px;
+	}
+	.FooterDiv .CopyRight {
+		padding-left:0;
+		background:none;
+		    bottom: -47px;
+	}
+	
+	
+	
+	/*
+	
+	.AllEventsDiv .col-sm-12 {
+		width:100%;
+	}
+	.AllEventsDiv .EventItem {
+		width:100%;
+		display:inline-block;
+		float:left;
+		height:auto;	
+		margin-bottom:30px;
+		border-radius:5px;
+		overflow:hidden;
+		border:solid #f4f5f6 1px;
+	}
+	.AllEventsDiv .EventItem .Image {
+		width:100%;
+		height:190px;
+		position:relative;
+		left:0;
+		margin-left:0
+	}
+	.AllEventsDiv .EventItem .Image img {
+		width:100%;
+		height:100%;
+		object-fit:cover;
+		border-radius:0;
+	}
+	.AllEventsDiv .EventItem .Info {
+		padding:17px 25px 25px 25px;
+		margin-left:0;
+		display: inline-block;
+		width: 100%;
+		height:200px;
+	}
+	.AllEventsDiv .EventItem .Info .CompLogo {
+		width: 70px;
+		height: 70px;
+		border-radius: 100%;
+		border: solid #eff0f2 1px;
+		position: absolute;
+		right: 17px;
+		top: -35px;
+		display:block;
+	}
+	.AllEventsDiv .EventItem .Info .CompLogo img {
+		width:100%;
+		height:100%;
+		object-fit:cover;
+		border-radius:100%;
+	}
+	.AllEventsDiv .EventItem .Info  .EventTitle {
+		font-size:11px;
+		color:#808080;
+		font-family:BPG110;
+		font-weight:normal;
+		margin-bottom:22px;
+		display:block;
+	}
+	.AllEventsDiv .EventItem .Info .Title{
+		font-size: 16px;
+		height: 75px;
+		overflow: hidden;
+		display: inline-flex;
+		align-items: center;
+	}
+	.AllEventsDiv .EventItem .Info .Date {
+		color:#808080;
+		opacity:1;
+		margin-bottom:12px;
+	}
+	.AllEventsDiv .EventItem .Info .Address {
+		color:#808080;
+		opacity:1
+	}
+	.AllEventsDiv .EventItem .LinkButton {
+		display:none;
+	}
+	.AllEventsDiv .col-sm-12 {
+		 
+	}
+	.AllEventsDiv .EventItem .Info {
+		text-align:left;
+		height:auto !important
+	} 
+	.HideMobile {
+		display:none;
+	}
+	
+	.EventHeader {
+		padding-bottom:9px !important;
+	}
+	*/
+	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+	 
+		font-size: 17px !important;
+		padding: 8px 6px 8px 5px !important; 
+	}
+		
+	
+	
+	.AllEventsDiv .EventItem {
+		height:95px;
+	}
+	.AllEventsDiv .EventItem .Image {
+		height: 56px;
+		width: 56px;
+		margin-left: -30px;
+		left:0;
+	}
+	.AllEventsDiv .EventItem .Image img {
+		margin-left: 5px;
+	}
+	.AllEventsDiv .EventItem .Info .Title {
+		font-size:15px;
+		padding-bottom:10px;
+	}
+	.AllEventsDiv .EventItem .Info {
+		padding-left: 15px;
+		width: calc(100% - 25px);
+		margin-left:0;
+		text-align:left;
+	}
+	.AllEventsDiv .EventItem .LinkButton {
+		display:none;
+	}
+	.AllEventsDiv .col-sm-12 {
+		padding-left:25px;
+	} 
+	.AllEventsDiv .EventItem .Info .Address {
+		display:none;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	.HeaderFilter,
+	.HeaderInput {
+		display:none;
+	}
+	
+	.MobileHeaderInput { 
+  	}
+	.MobileHeaderInput {		
+		width: calc(100% - 64px);
+		height: 50px;
+		border-radius: 40px;
+ 		padding-left: 30px;
+		font-family: BPG110Caps !important;
+		font-weight: normal;
+		font-size: 13px;
+		color: #666 !important;
+		border: solid #e9eef1 1px;
+ 		display: inline-block;
+		float: left;
+		line-height: 50px;
+		
+	} 
+	.MobileSearchButton {
+		height:50px;
+		width:50px;
+		background:#ff353c;
+		border: solid #ff353c 1px;
+		border-radius:30px;
+		display:inline-block;
+		border:none;
+		position:relative; 
+		text-align:center; 
+		color:#fff; 
+		font-size:14px; 
+		margin-left:10px;
+	}
+	.HideSearch_1 {
+		height:50px;
+		width:50px;
+		background:#fff;
+		border: solid #ff353c 1px;
+		border-radius:30px;
+		display:inline-block;
+		border:none;
+		position:relative; 
+		text-align:center; 
+		color:#555; 
+		font-size:14px; 
+		margin-left:10px;
+		box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+	}
+		
+	
+	.DisplayNone {
+		display:none
+	}
+	.BodyOverflowHidden {
+		overflow:hidden !important
+	}
+	.MobileSearch_1 {
+		position:fixed;
+		top:60px;
+		left:0;
+		width:100%;
+		height:calc(100% - 60px);
+		background:#fff;
+		z-index:9999999999;
+		overflow-x:hidden
+	}
+	.FormMobile1 {
+		padding:15px;
+	}
+	.FormMobileContent {
+		display:inline-block;
+		width:100%;
+	}
+	.FormMobileContent .MobileCat {
+		margin-top:5px;
+		border-bottom:solid #e3e8eb 1px;
+		display:inline-block;
+		width:100%;
+		padding-bottom:7px;
+	}
+	.FormMobileContent .MobileCat .col-sm-3 {
+		display:inline-block;
+		float:left;
+		width:25%;
+		text-align:center;
+	}
+	.FormMobileContent .MobileCat .Item {
+		text-align:center;
+		display: inline-block;
+	}
+	.FormMobileContent .MobileCat .Item .Icon { 
+		width: 50px;
+		height: 50px;
+		border-radius: 100%;
+		text-align: center;
+		background:#ff353c;
+		color: #fff;
+		font-size: 16px;
+		align-items: center;
+		line-height: 50px;
+		font-weight: normal;
+		display: inline-block;
+ 		cursor: pointer;
+		transition: 0.5s;
+	}
+	.FormMobileContent .MobileCat .Item .Title {
+		margin-top:10px;
+		font-size:10.5px;
+		font-family:BPG110;
+		color:#141414;
+	}
+	
+	.FormMobileContent .MobileList {
+		padding-left:15px;
+	}
+	.FormMobileContent .MobileList .Item {
+		border-bottom:solid #e3e8eb 1px;
+		display:inline-flex;
+		width:100%;
+		padding-top:15px;
+		padding-bottom:15px;
+	}
+	.FormMobileContent .MobileList .Item .Image {
+		width:35px;
+		height:35px;
+		border-radius:100%;
+		display:inline-block;
+		margin-right:15px;
+	}
+	.FormMobileContent .MobileList .Item .Image img {
+		width:100%;
+		height:100%;
+		border-radius:100%;
+		object-fit:cover;
+	}
+	.FormMobileContent .MobileList .Item .Info {}
+	.FormMobileContent .MobileList .Item .Info label {
+		width:100%;
+		margin-bottom:0;
+		font-family:BPG110Caps;
+		font-size:12px;
+		color:#000
+	}
+	.FormMobileContent .MobileList .Item .Info span {
+		width:100%;
+		font-family:BPG110;
+		font-size:12px;
+		position:relative;
+		top:-2px;
+		color:#727272;
+	}
+	
+	
+	
+	.MobileSearch_1 .MobileInput1 {
+		display:inline-block;
+		width: calc(100% - 64px);
+		height:50px;
+		position:relative;
+		top:-3px;
+		float:left;	
+		padding-top:3px;
+		
+	}
+	.MobileSearch_1 .MobileInput1 input {
+		width: 100%;
+		height: 50px;
+		border-radius: 40px;
+		padding-left: 30px;
+		font-family: BPG110Caps !important;
+		font-weight: normal;
+		font-size: 13px;
+		color: #666 !important;
+		border: solid #e9eef1 1px;
+		display: inline-block;
+		float: left;
+		padding-top:3px;
+	}
+	.MobileSearch_1 .MobileInput1 input::-webkit-input-placeholder { 
+		font-family:BPG110Caps !important;
+		font-weight:normal;
+		font-size: 13px;
+		color:#666 !important;
+	}
+	.MobileSearch_1 .MobileInput1 input::-moz-placeholder {
+		font-family:BPG110Caps !important;
+		font-weight:normal;
+		font-size: 13px;
+		color:#666 !important;
+	}
+	.MobileSearch_1 .MobileInput1 input:-ms-input-placeholder { 
+		 font-family:BPG110Caps !important;
+		font-weight:normal;
+		font-size: 13px;
+		color:#666 !important;
+	}
+	.MobileSearch_1 .MobileInput1 input:-moz-placeholder { 
+		font-family:BPG110Caps !important;
+		font-weight:normal;
+		font-size: 13px;
+		color:#666 !important;
+	}
+	
+	.MobileInput1 .ClearInput {
+		position: absolute;
+		right: 5px;
+		top: 4px;
+		font-size: 18px;
+		color: #b3b3b3;
+		height: 100%;
+		width: 40px;
+		text-align: center;
+		line-height: 50px;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	.MobileSearch_222 {
+		position:fixed;
+		top:60px;
+		left:0;
+		width:100%;
+		height:calc(100% - 60px);
+		background:#fff;
+		z-index:9999999999;
+		overflow-x:hidden;
+	}
+	.FormMobile2 {
+		padding:15px;
+	}
+	.FormMobileCategory {
+		display:inline-block;
+		width:100%;
+	} 
+	 
+	.MobileSearch_Category .MobileInputCategory {
+		display:inline-block;
+		width: calc(100% - 64px);
+		height:50px;
+		position:relative;
+		top:-3px;
+		float:left;	
+		padding-top:3px;
+		
+	}
+	.MobileSearch_Category .MobileInputCategory input {
+		width: 100%;
+		height: 50px;
+		border-radius: 40px;
+		padding-left: 30px;
+		font-family: BPG110Caps !important;
+		font-weight: normal;
+		font-size: 13px;
+		color: #666 !important;
+		border: solid #e9eef1 1px;
+		display: inline-block;
+		float: left;
+		padding-top:3px;
+	}
+	.MobileSearch_Category .MobileInputCategory input::-webkit-input-placeholder { 
+		font-family:BPG110Caps !important;
+		font-weight:normal;
+		font-size: 13px;
+		color:#666 !important;
+	}
+	.MobileSearch_Category .MobileInputCategory input::-moz-placeholder {
+		font-family:BPG110Caps !important;
+		font-weight:normal;
+		font-size: 13px;
+		color:#666 !important;
+	}
+	.MobileSearch_Category .MobileInputCategory input:-ms-input-placeholder { 
+		 font-family:BPG110Caps !important;
+		font-weight:normal;
+		font-size: 13px;
+		color:#666 !important;
+	}
+	.MobileSearch_Category .MobileInputCategory input:-moz-placeholder { 
+		font-family:BPG110Caps !important;
+		font-weight:normal;
+		font-size: 13px;
+		color:#666 !important;
+	}
+	
+	.MobileInputCategory .ClearInput {
+		position: absolute;
+		right: 5px;
+		top: 4px;
+		font-size: 18px;
+		color: #b3b3b3;
+		height: 100%;
+		width: 40px;
+		text-align: center;
+		line-height: 50px;
+	}
+	
+	
+	
+	
+	
+	
+	 
+	
+	.MobileCategoryHead {
+		left: 0;
+		width: 100%;
+		height: calc(100% - 60px);
+		background: #fff;
+		z-index: 9999999999;
+		overflow-x: hidden;
+		margin-bottom:15px;
+	}
+	.MobileCategoryHead .MobCategoruInput {
+		display: inline-block;
+		width: calc(100% - 130px);
+		height: 50px;
+		position: relative;
+		top: -3px;
+		float: left;
+		padding-top: 3px;
+	}
+	.MobileCategoryHead .MobCategoruInput input {
+		width: calc(100% - 5px);
+		height: 50px;
+		border-radius: 40px;
+		padding-left: 30px;
+		font-family: BPG110Caps !important;
+		font-weight: normal;
+		font-size: 13px;
+		color: #666 !important;
+		border: solid #e9eef1 1px;
+		display: inline-block;
+		float: left;
+		padding-top: 3px;
+	}
+	
+	.MobileCategoryHead  .ShowMapDiv {
+		height: 50px;
+		width: 50px;
+		background: #fff;
+		border: solid #ff353c 1px;
+		border-radius: 30px;
+		display: inline-block;
+		border: none;
+		position: relative;
+		text-align: center;
+		color: #666;
+		font-size: 22px;
+		margin-left: 10px;
+		border: solid #e9eef1 1px;
+	}
+	.MobileCategoryHead .ShowSettings {
+		height: 50px;
+		width: 50px;
+		background: #fff;
+		border: solid #ff353c 1px;
+		border-radius: 30px;
+		display: inline-block;
+		border: none;
+		position: relative;
+		text-align: center;
+		color: #666;
+		font-size: 22px;
+		margin-left: 10px;
+		border: solid #e9eef1 1px;
+		transition:0.5s;
+	}
+	.MobileCategoryHead .ShowSettings .Remove1 {
+		display:none;
+	}
+	.MobileCategoryHead .ShowSettings.active .Remove1{
+		display:block;
+	}
+	.MobileCategoryHead .ShowSettings.active .Slide1{
+		display:none
+	}
+	
+	
+	
+	
+	
+	
+	
+	.CategorySettings {
+		background:#fff;
+		border-top:solid #e1e6ea 1px;
+		height:calc(100% - 140px);
+		width:100%;
+		top:139px;
+		left:0;
+		position:fixed;
+		z-index:999999;
+		visibility:visible;
+		opacity:1;
+		transition:0.5s;
+	}
+	
+	.CategorySettings .HeaderCat {
+		height: 80px;
+		line-height: 80px;
+		padding-left: 15px;
+		border-bottom: solid #e1e6ea 1px;
+		position:relative;
+		display:none;
+	}
+	
+	.CategorySettings .HeaderCat .CloseSeetingInMap {
+		height: 50px;
+		width: 50px;
+		background: #fff;
+		border: solid #ff353c 1px;
+		border-radius: 30px;
+		display: inline-block;
+		border: none;
+ 		text-align: center;
+		color: #666;
+		font-size: 22px;
+		margin-left: 10px;
+		border: solid #e9eef1 1px;
+		transition: 0.5s;
+		line-height: 50px;
+		position: absolute;
+		top: 13px;
+		right: 15px;
+		box-shadow: 0 2px 3px #dddddd;
+	}
+	.CategorySettings.ShowInMap .HeaderCat {
+		display:block;
+	}
+ 	
+	.CategorySettings .HeaderCat .Title {
+		font-family: BPG110Caps !important;
+		font-weight: bold;
+		font-size: 15px;
+  	}
+	
+	.CategorySettings.ShowInMap {
+		z-index: 999999999;
+		visibility: visible;
+		opacity: 1;
+		top: 0;
+		height: calc(100% - 80px);
+	}
+	.CategorySettings .Content {
+		 height:calc(100% - 80px);
+		 overflow:scroll
+	}
+	.CategorySettings .Content .List {
+		border-bottom:solid #e1e6ea 1px;
+		padding:15px;
+	}
+	.CategorySettings .Content .List:last-child {
+		border-bottom:none;
+	}
+	.CategorySettings .Content .List .Title {
+		font-family:BPG110Caps !important;
+		font-weight:bold;
+		font-size:15px;
+		margin-top:10px;
+		margin-bottom:10px;
+	}
+	.CategorySettings .Content .List .Item {
+		 
+	}
+	.CategorySettings .Content .List .Item label {
+		font-family:BPG110;
+		font-weight:normal !important;
+		font-size:13px;
+		display:block;
+		padding-top:12px;
+		padding-bottom:7px;
+	}
+	
+	.CatSettingFooter {
+		padding:0 20px;
+		height:80px;
+		line-height:80px;
+		display:inline-block;
+		width:100%;
+		border-top:solid #e1e6ea 1px;
+		background:#fff;
+	}
+	.CatSettingFooter .ResultsButton {
+		width:100%;
+		height:50px;
+		display:inline-block;
+		background:#ff353c;
+		border:none;		
+		border-radius:50px;
+		line-height:50px;
+		color:#fff;
+		font-family:BPG110Caps !important; 
+	}
+	 
+	.CheckboxStyle1 {
+		position:relative;
+	}	
+	.CheckboxStyle1 input[type="checkbox"]{
+		display:none;
+	}
+	.CheckboxStyle1 input[type="checkbox"]:checked + label {
+		color:#ff1d25;
+	}
+	.CheckboxStyle1 input[type="checkbox"]:checked + label::after {
+		content:"\f00c";
+		font: normal normal normal 14px/1 FontAwesome;
+		color:#ff1d25;
+		position: absolute;
+		right: 0;
+	}
+	
+	.CheckboxStyle2 {
+		position:relative;
+	}	
+	.CheckboxStyle2 input[type="checkbox"]{
+		display:none;
+	}
+	.CheckboxStyle2 input[type="checkbox"] + label:after {
+		content:'';
+		width:20px;
+		height:20px;
+		border:solid #c0c0c0 1px;
+		position:absolute;
+		right:0;
+		top:10px;
+		border-radius:3px;
+		text-align: center;
+		padding-top: 2px;
+	}
+	.CheckboxStyle2 input[type="checkbox"]:checked + label {
+		color:#ff1d25;
+	}
+	.CheckboxStyle2 input[type="checkbox"]:checked + label::after {
+		content:"\f00c";
+		font: normal normal normal 14px/1 FontAwesome;
+		color:#fff;
+		position: absolute;
+		right: 0;
+		background:#ff1d25;
+		border:solid #ff1d25 1px;
+	}
+	
+
+	 
+	
+	
+	
+	
+	.MobileCategoryMap {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 99999999;
+		background: #fff;
+		visibility:visible;
+		opacity:1;
+		transition:0.5s;
+	}
+	.MobileCategoryMap .MapDiv {
+		width:100%;
+		height:calc(100% - 274px);
+		display:inline-block;
+		float:left;
+		position:relative;
+	}
+	#MapCategories {
+		width:100%;
+		height:100%;
+	}
+	
+	.MobileCategoryMap .BottomContent {
+		height:274px;
+		width:100%;
+		display:inline-block;
+		float:left;
+ 		padding-top:12px;
+		padding-bottom:12px;
+		padding-left:0px;
+		overflow-y:hidden;
+		overflow-x: auto;
+		white-space: nowrap;
+	}
+	.MobileCategoryMap .BottomContent .CategoriesDiv {}
+	.MobileCategoryMap .BottomContent .CategoriesDiv .Item {
+		width:210px;
+		height:254px;
+		overflow:hidden;
+		border-bottom:solid #ff030b 3px;
+		display:inline-block;
+		margin-right:10px;
+		border-radius:5px;
+	}
+	.MobileCategoryMap .BottomContent .CategoriesDiv .Item .Image {
+		height:135px;
+		width:100%;
+	}
+	.MobileCategoryMap .BottomContent .CategoriesDiv .Item .Image img {}
+	.MobileCategoryMap .BottomContent .CategoriesDiv .Item .Info {
+		font-size:9px;
+		padding-top:4px;
+	}
+	.MobileCategoryMap .BottomContent .CategoriesDiv .Item .Title {
+ 		padding-top:3px;
+		font-size:13px;
+	}
+	.MobileCategoryMap .BottomContent .CategoriesDiv .Item .Info li {
+		margin-top:0;
+		font-size:9px;
+	}
+	
+	.CategoriesDiv .Info .CompanyLogo {
+		height:54px;
+		width:54px;
+		top:-27px;
+		right:10px;
+	}
+	
+	.MobileCategoryMap .CloseMobileMap {
+		height: 50px;
+		width: 50px;
+		background: #fff;
+		border: solid #ff353c 1px;
+		border-radius: 30px;
+		display: inline-block;
+		border: none;
+		position: absolute;
+		top:20px;
+		left:20px;
+		text-align: center;
+		z-index:999;
+		color: #666;
+		font-size: 22px;
+ 		border: solid #e9eef1 1px;
+		line-height:50px;
+		transition:0.5s;
+		box-shadow: 0 2px 3px #dddddd;
+	}
+	.MobileCategoryMap .ShowSettingsToMap {
+		height: 50px;
+		width: 50px;
+		background: #fff;
+		border: solid #ff353c 1px;
+		border-radius: 30px;
+		display: inline-block;
+		border: none;
+		position: absolute;
+		right:20px;
+		bottom:20px;
+		text-align: center;
+		color: #666;
+		font-size: 22px;
+		margin-left: 10px;
+		border: solid #e9eef1 1px;
+		transition:0.5s;
+		z-index:999;
+		box-shadow: 0 2px 3px #dddddd;
+	}
+	.MobileCategoryMap .ShowSettingsToMap .Remove2 {
+		display:none;
+	}
+	.MobileCategoryMap .ShowSettingsToMap.active .Remove2{
+		display:block;
+	}
+	.MobileCategoryMap .ShowSettingsToMap.active .Slide2{
+		display:none
+	}
+	
+	
+	.LanguageDiv {
+		display:none;
+	}
+	
+	.HiddenDiv {
+		visibility:hidden;
+		opacity:0;
+	}
+	.HiddenDiv2 {
+		visibility:hidden;
+		opacity:0;
+	}
+		
+	.SmallMapDescription {
+		display:none;
+	}
+
+	.CategoriesPageMap{
+		height: auto;
+	}
+	.LeftCategoriesList{
+		width: 100%;
+	}
+	.CategoriesPageMap .CategoriesMap{
+		width: 100%;
+		height: 450px;
+	}
+}
+
+@media (max-width: 992px){
+	.display_none_mobile {
+		display:none !important;
+	}
+}
+
+@media (min-width: 992px){
+	.MobileSearch_1 {
+		display:none;
+	}
+	.MobileHeaderInput,
+	.MobileSearchButton	{
+		display:none;
+	}
+	
+	.UserHeadMenu .fa {
+		display: none;
+	}
+	.HomeBottomDiv {
+		display: inline-block;
+		float: left;
+		width: 100%;
+		margin-top: 23px;
+	}
+	.MobileAllEvents {
+		display:none;
+	}
+	.PayMethods .fa {
+		display:none;
+	}
+	.MobileLang {
+		display:none;
+	}
+	
+	.MobileCategoryHead {
+		display:none;
+	}
+	.CategorySettings {
+		display:none;
+	}
+	.MobileCategoryMap {
+		display:none;
+	}
+	
+}
+
+
+
+
+
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1280px) {
+    
+}
+
+@media (min-width: 1366px) {
+     
+}
+
+@media (min-width: 1440px) {
+	 
+}
+    
+
+@media (min-width: 1680px) {
+  
+}
+
+@media (min-width: 1920px) {
+     
+}
+
+@media (min-width: 2560px) {
+	
+}
