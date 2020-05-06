@@ -9,12 +9,16 @@
 	<div class="container"> 			
 		<div class="CategoryTitle">
 			<div class="col-sm-12"> 
-				<div class="Icon"><i class="fa <?php echo $image2;?>"></i></div>
+				<div class="Icon g-bgred"><i class="fa <?php echo $image2;?>"></i></div>
 				<div class="Title"><?php echo $title;?></div> 
 			</div>
 		</div>
-		<div class="HeaderWidthRight">				 
-			<div class="row">
+		<div class="HeaderWidthRight HideMobile" style="top: -35px;">	
+			<div class="text-right">
+				<div class="ListDivButton ChangeEventStructure"><i class="fa fa-list-ul"></i></div>
+				<div class="ViewDivButton ChangeEventStructure"><i class="fa fa-th"></i></div>
+			</div>			 
+			<!-- <div class="row">
 				<div class="col-sm-2 ColSm333">
 					<select class="BatumiGuideSelectBlue">
 						<option>All Categories</option>
@@ -23,7 +27,7 @@
 				<div class="col-sm-2 ColSm222">
 					<button class="OrangeButtonRound"><i class="fa fa-map-marker" aria-hidden="true"></i></button>
 				</div>
-			</div>				 
+			</div>	 -->			 
 		</div> 
 	</div>
 </div>
@@ -171,13 +175,13 @@
 			</div>
 			<div class="EventDiv">
 				<div class="EventHeader">
-					<div class="col-sm-6 padding_0">
+					<div class="col-sm-12 padding_0">
 						<div class="EventTitme">10.10.2018</div>
 					</div>
-					<div class="col-sm-6 padding_0 text-right HideMobile">
+					<!-- <div class="col-sm-6 padding_0 text-right HideMobile">
 						<div class="ListDivButton ChangeEventStructure"><i class="fa fa-list-ul"></i></div>
 						<div class="ViewDivButton ChangeEventStructure"><i class="fa fa-th"></i></div>
-					</div>
+					</div> -->
 				</div>
 				<!-- ListStyleEvent -->
 				<div class="AllEventsDiv ListStyleEvent">

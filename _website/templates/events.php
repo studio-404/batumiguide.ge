@@ -6,7 +6,7 @@
             <div class="wrapper fix">
                 <div id="location" class="left">
                     <div class="title">
-                        <h1><?php echo $title; ?>xxxxxxxxxxxx</h1>
+                        <h1><?php echo $title; ?></h1>
                     </div>
                     <!-- .title -->
                     <ul>
