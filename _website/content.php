@@ -44,6 +44,10 @@
 <script src="_website/js/owl.carousel.min.js" type="text/javascript"></script>
 <script src="_website/js/scripts.js" type="text/javascript"></script>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
 <link rel="stylesheet" href="_website/css/font-awesome.css">
 <link rel="stylesheet" href="_website/css/bootstrap.css">
 <link rel="stylesheet" href="_website/css/fonts.css">

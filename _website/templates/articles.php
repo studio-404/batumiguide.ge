@@ -13,21 +13,56 @@
 				<div class="Title"><?php echo $title;?></div> 
 			</div>
 		</div>
-		<div class="HeaderWidthRight HideMobile" style="top: -35px;">	
+		<div class="HeaderWidthRight HideMobile">	
+			<div class="g-datepicker">
+				<input type="text" name="daterange" class="g-picker g-from" placeholder="" autocomplete="off" value="--" />
+				<script>
+				$(function() {
+				  $('input[name="daterange"]').daterangepicker({
+				  	"locale": {
+				        "format": "MM/DD/YYYY",
+				        "separator": " - ",
+				        "applyLabel": "Applyx",
+				        "cancelLabel": "Cancel",
+				        "fromLabel": "From",
+				        "toLabel": "To",
+				        "customRangeLabel": "Custom",
+				        "daysOfWeek": [
+				            "Su",
+				            "Mo",
+				            "Tu",
+				            "We",
+				            "Th",
+				            "Fr",
+				            "Sa"
+				        ],
+				        "monthNames": [
+				            "January",
+				            "February",
+				            "March",
+				            "April",
+				            "May",
+				            "June",
+				            "July",
+				            "August",
+				            "September",
+				            "October",
+				            "November",
+				            "December"
+				        ],
+			        	"firstDay": 1
+			    	},
+				    opens: 'left'
+				  }, function(start, end, label) {
+				    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+				  });
+				});
+				</script>
+			</div>
 			<div class="text-right">
 				<div class="ListDivButton ChangeEventStructure"><i class="fa fa-list-ul"></i></div>
 				<div class="ViewDivButton ChangeEventStructure"><i class="fa fa-th"></i></div>
 			</div>			 
-			<!-- <div class="row">
-				<div class="col-sm-2 ColSm333">
-					<select class="BatumiGuideSelectBlue">
-						<option>All Categories</option>
-					</select>
-				</div>
-				<div class="col-sm-2 ColSm222">
-					<button class="OrangeButtonRound"><i class="fa fa-map-marker" aria-hidden="true"></i></button>
-				</div>
-			</div>	 -->			 
 		</div> 
 	</div>
 </div>
@@ -46,10 +81,6 @@
 						<a href="<?php echo href($a["id"]);?>" class="EventItem">
 							<div class="Image"><img src="<?php echo ($a["image1"]!="") ? $a["image1"]:"_website/img/article1.jpg";?>"/></div>
 							<div class="Info">
-								<!-- <div class="EventTitle">ჰელუინი</div> -->
-								<!-- <div class="CompLogo">
-									<img src="<?php echo ($a["image1"]!="") ? $a["image1"]:"_website/img/article1.jpg";?>"/>
-								</div> -->
 								<div class="Title">
 									<?php echo $a["title"];?>
 								</div>
