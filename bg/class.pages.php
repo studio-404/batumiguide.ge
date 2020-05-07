@@ -306,6 +306,7 @@ class Manager_Pages
         $tpl['all_par'] = $all ? '&all=show' : null;
         //Pager: end
         $sql = "SELECT * FROM `".c("table.pages")."` WHERE language = '" . l() . "' {$all_news}AND `deleted` = '0' AND visibility = 1 ORDER BY postdate DESC{$limit};";
+        echo $sql;
         $res = db_fetch_all($sql);
         $tpl['events'] = $res;
         if($this->storage->section["template"]=='')

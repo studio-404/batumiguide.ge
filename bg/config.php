@@ -94,7 +94,7 @@ $c['text.page_count'] = 10;
 $c['news.per_page'] = 10;
 $c['news.page_count'] = 15;
 
-$c['articles.per_page'] = 10;
+$c['articles.per_page'] = 12;
 $c['articles.page_count'] = 10;
 
 $c['events.per_page'] = 10;

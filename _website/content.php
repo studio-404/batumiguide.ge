@@ -258,7 +258,7 @@ if(isset($g_banners["banner25"])){
 					</div>
 				<?php }else{ ?>			
 					<div class="col-sm-2">
-						<a href="<?=$g_banners["banner27"][$i]["link"]?>" class="Item" style="line-height:90px; height: 90px; text-align:center; background-image: url('<?=$g_banners["banner27"][$i]["image1"]?>'); display:block; background-repeat: no-repeat; background-size: cover; background-position: center center;" title="<?=htmlentities($g_banners["banner27"][$i]["title"])?>">
+						<a href="<?=$g_banners["banner27"][$i]["link"]?>" class="Item" style="line-height:90px; height: 90px; text-align:center; background-image: url('<?=$g_banners["banner27"][$i]["image1"]?>'); display:block; background-repeat: no-repeat; background-size: cover; background-position: center center;" title="<?=htmlentities($g_banners["banner27"][$i]["title"])?>" target="_blank">
 						</a>
 					</div>
 				<?php 

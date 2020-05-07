@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="_website/css/calendar.css">
 
-<div class="SmallHeaderInside" style="margin-bottom: 0px;">
+<div class="SmallHeaderInside g-border-top-grey" style="margin-bottom: 0px;">
 	<div class="container"> 			
 		<div class="CategoryTitle">
 			<div class="col-sm-12"> 
@@ -46,10 +46,10 @@
 						<a href="<?php echo href($a["id"]);?>" class="EventItem">
 							<div class="Image"><img src="<?php echo ($a["image1"]!="") ? $a["image1"]:"_website/img/article1.jpg";?>"/></div>
 							<div class="Info">
-								<div class="EventTitle">ჰელუინი</div>
-								<div class="CompLogo">
+								<!-- <div class="EventTitle">ჰელუინი</div> -->
+								<!-- <div class="CompLogo">
 									<img src="<?php echo ($a["image1"]!="") ? $a["image1"]:"_website/img/article1.jpg";?>"/>
-								</div>
+								</div> -->
 								<div class="Title">
 									<?php echo $a["title"];?>
 								</div>
