@@ -323,6 +323,30 @@ class Manager_Pages
             return ($this->storage->content = NULL);
         $all_news = $all ? " AND menuid IN (SELECT id FROM `".c("table.menus")."` WHERE `deleted` = '0' AND type = 'articles') " : " AND menuid = {$menu_id} ";
 
+        $tpl = $this->storage->section;
+        /*G script start*/
+        $tpl["startDate"] = date("d/m/Y");
+        $tpl["endDate"] = date("d/m/Y");
+        $tpl["dateString"] = "";
+        if(
+            isset($_GET["daterange"]) && 
+            !empty($_GET["daterange"])
+          ){
+          $daterange = explode("@", $_GET["daterange"]);
+          
+          if(
+            isset($daterange[0]) && 
+            isset($daterange[1]) && 
+            g_validateDate($daterange[0], 'd-m-Y') && 
+            g_validateDate($daterange[1], 'd-m-Y')
+          ){
+            $tpl["startDate"] = $daterange[0];
+            $tpl["endDate"] = $daterange[1];
+            $tpl["dateString"] = $tpl["startDate"]." / ".$tpl["endDate"];
+          }
+        }
+        /*G script end*/
+        
         // search by date
         $seachBydate = "";
         if(isset($_GET['date'])){
@@ -337,7 +361,7 @@ class Manager_Pages
         $count = db_fetch($count);
         $count = empty($count) ? 0 : $count['cnt'];
         $page_max = ceil($count / $per_page);
-        $tpl = $this->storage->section;
+        
         $tpl['page_cur'] = $page;
         $tpl['page_max'] = $page_max;
         $tpl['item_count'] = $count;
@@ -353,6 +377,7 @@ class Manager_Pages
 
         $tpl['articles'] = $res;
         $tpl['postdates'] = $postdateres;
+
         if($this->storage->section["template"]=='')
             $this->storage->content = template('articles', $tpl);
         else

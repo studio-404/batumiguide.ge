@@ -1,6 +1,5 @@
 <?php defined('DIR') OR exit; ?>
 
-
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="_website/css/calendar.css">
@@ -15,7 +14,7 @@
 		</div>
 		<div class="HeaderWidthRight HideMobile">	
 			<div class="g-datepicker">
-				<input type="text" name="daterange" class="g-picker g-from" placeholder="" autocomplete="off" value="--" />
+				<input type="text" name="daterange" class="g-picker g-from" placeholder="<?=l("daterangepickersearch")?>" autocomplete="off" value="<?=$dateString?>" />
 			</div>
 			<div class="text-right">
 				<div class="ListDivButton ChangeEventStructure"><i class="fa fa-list-ul"></i></div>
@@ -69,32 +68,14 @@
 		        </div>            
 <?php endif;?>
 
-
+<?php 
+$ms = c("month.names"); 
+$ds = c("day.shortnames"); 
+?>
 <script type="text/javascript">
 $(function() {
-  <?php 
-  $ms = c("month.names"); 
-  $ds = c("day.shortnames"); 
-  $startDate = date("d-m-Y");
-  $endDate = date("d-m-Y");
-  if(
-  		isset($_GET["daterange"]) && 
-  		!empty($_GET["daterange"])
-  	){
-  	$daterange = explode("@", $_GET["daterange"]);
-  	
-  	if(
-  		isset($daterange[0]) && 
-  		isset($daterange[1]) && 
-  		g_validateDate($daterange[0], 'd-m-Y') && 
-  		g_validateDate($daterange[1], 'd-m-Y')
-  	){
-	  	$startDate = $daterange[0];
-	  	$endDate = $daterange[1];
-  	}
-  }
-  ?>
   $('input[name="daterange"]').daterangepicker({
+    "autoUpdateInput": false,
   	"startDate": '<?=$startDate?>', /* moment().subtract(7, 'day') moment().add(7, 'day') */
   	"endDate": '<?=$endDate?>', /* moment().subtract(7, 'day') moment().add(7, 'day') */
   	"locale": {
