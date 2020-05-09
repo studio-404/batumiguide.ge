@@ -1340,6 +1340,10 @@ a.Dagvekontaqtet:hover {
     right: 70px;
 }
 
+.calendar-table{
+	font-family: BPG110 !important;
+}
+
 .g-datepicker .g-picker{
 	width: 200px;
     height: 50px;

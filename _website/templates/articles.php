@@ -16,48 +16,6 @@
 		<div class="HeaderWidthRight HideMobile">	
 			<div class="g-datepicker">
 				<input type="text" name="daterange" class="g-picker g-from" placeholder="" autocomplete="off" value="--" />
-				<script>
-				$(function() {
-				  $('input[name="daterange"]').daterangepicker({
-				  	"locale": {
-				        "format": "MM/DD/YYYY",
-				        "separator": " - ",
-				        "applyLabel": "Applyx",
-				        "cancelLabel": "Cancel",
-				        "fromLabel": "From",
-				        "toLabel": "To",
-				        "customRangeLabel": "Custom",
-				        "daysOfWeek": [
-				            "Su",
-				            "Mo",
-				            "Tu",
-				            "We",
-				            "Th",
-				            "Fr",
-				            "Sa"
-				        ],
-				        "monthNames": [
-				            "January",
-				            "February",
-				            "March",
-				            "April",
-				            "May",
-				            "June",
-				            "July",
-				            "August",
-				            "September",
-				            "October",
-				            "November",
-				            "December"
-				        ],
-			        	"firstDay": 1
-			    	},
-				    opens: 'left'
-				  }, function(start, end, label) {
-				    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-				  });
-				});
-				</script>
 			</div>
 			<div class="text-right">
 				<div class="ListDivButton ChangeEventStructure"><i class="fa fa-list-ul"></i></div>
@@ -111,3 +69,71 @@
 		        </div>            
 <?php endif;?>
 
+
+<script type="text/javascript">
+$(function() {
+  <?php 
+  $ms = c("month.names"); 
+  $ds = c("day.shortnames"); 
+  $startDate = date("d-m-Y");
+  $endDate = date("d-m-Y");
+  if(
+  		isset($_GET["daterange"]) && 
+  		!empty($_GET["daterange"])
+  	){
+  	$daterange = explode("@", $_GET["daterange"]);
+  	
+  	if(
+  		isset($daterange[0]) && 
+  		isset($daterange[1]) && 
+  		g_validateDate($daterange[0], 'd-m-Y') && 
+  		g_validateDate($daterange[1], 'd-m-Y')
+  	){
+	  	$startDate = $daterange[0];
+	  	$endDate = $daterange[1];
+  	}
+  }
+  ?>
+  $('input[name="daterange"]').daterangepicker({
+  	"startDate": '<?=$startDate?>', /* moment().subtract(7, 'day') moment().add(7, 'day') */
+  	"endDate": '<?=$endDate?>', /* moment().subtract(7, 'day') moment().add(7, 'day') */
+  	"locale": {
+        "format": "DD/MM/YYYY",
+        "separator": " - ",
+        "applyLabel": "<?=l("apply")?>",
+        "cancelLabel": "<?=l("cancel")?>",
+        "fromLabel": "From",
+        "toLabel": "To",
+        "customRangeLabel": "Custom",
+        "daysOfWeek": [
+            "<?=$ds[7][l()]?>",
+            "<?=$ds[1][l()]?>",
+            "<?=$ds[2][l()]?>",
+            "<?=$ds[3][l()]?>",
+            "<?=$ds[4][l()]?>",
+            "<?=$ds[5][l()]?>",
+            "<?=$ds[6][l()]?>"
+        ],
+        "monthNames": [
+            "<?=$ms[1][l()]?>",
+            "<?=$ms[2][l()]?>",
+            "<?=$ms[3][l()]?>",
+            "<?=$ms[4][l()]?>",
+            "<?=$ms[5][l()]?>",
+            "<?=$ms[6][l()]?>",
+            "<?=$ms[7][l()]?>",
+            "<?=$ms[8][l()]?>",
+            "<?=$ms[9][l()]?>",
+            "<?=$ms[10][l()]?>",
+            "<?=$ms[11][l()]?>",
+            "<?=$ms[12][l()]?>"
+        ],
+    	"firstDay": 1
+	},
+    opens: 'left'
+  }, function(start, end, label) {
+    // console.log("A new date selection was made: " + start.format('DD-MM-YYY') + ' to ' + end.format('DD-MM-YYY'));
+    location.href = "https://batumiguide.ge/<?=l()?>/events/?daterange="+start.format('DD-MM-YYYY')+"@"+end.format('DD-MM-YYYY');
+  });
+});
+</script>
