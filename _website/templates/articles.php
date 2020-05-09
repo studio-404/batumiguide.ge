@@ -57,17 +57,6 @@
 </div>
 
 
-
-
-<?php if($page_max>1) : ?>
-		        <div class="Pagination">
-<?php for($i=1;$i<=$page_max;$i++) : ?>		          
-		          <li><a href="<?php echo href($id).'?page='.$i;?>" <?php echo ($page_cur==$i) ? 'class="active"':'';?> ><?php echo $i;?></a></li>
-<?php endfor; ?>
-		          <div class="clear"></div>
-		        </div>            
-<?php endif;?>
-
 <?php 
 $ms = c("month.names"); 
 $ds = c("day.shortnames"); 
