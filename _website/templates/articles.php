@@ -10,6 +10,10 @@
 			<div class="col-sm-12"> 
 				<div class="Icon g-bgred"><i class="fa <?php echo $image2;?>"></i></div>
 				<div class="Title"><?php echo $title;?> ( <?=$item_count?> )</div> 
+
+        <div class="g-datepicker g-desktop-hide g-datepicker-mobile">
+          <input type="text" name="daterangemobile" class="g-picker g-from" placeholder="<?=l("daterangepickersearch")?>" autocomplete="off" value="<?=$dateString?>" readonly="readonly" />
+        </div>
 			</div>
 		</div>
 		<div class="HeaderWidthRight HideMobile">	
@@ -41,7 +45,7 @@
 								<div class="Title">
 									<?php echo $a["title"];?>
 								</div>
-								<div class="Date"><i class="fa fa-clock-o"></i> <?php echo $a["postdatestring"];?> - <?php echo $a["expiredatestring"];?></div>
+								<div class="Date"><i class="fa fa-clock-o"></i> <?php echo $a["postdate"];?></div>
 								<div class="Address"><?php echo $a["address"];?></div>
 							</div> 
 							<div class="LinkButton"><i class="fa fa-angle-right"></i></div>
@@ -63,13 +67,7 @@ $ds = c("day.shortnames");
 ?>
 <script type="text/javascript">
 $(function() {
-  $('input[name="daterange"]').daterangepicker({
-    "beforeShowDay": function(date) {
-      console.log(date);
-      // if (date == myDate) {
-      //   return [true, 'css-class-to-highlight', 'tooltipText'];
-      // }
-    },
+  $('input[name="daterange"], input[name="daterangemobile"]').daterangepicker({
     "autoUpdateInput": false,
   	"startDate": '<?=$startDate?>', /* moment().subtract(7, 'day') moment().add(7, 'day') */
   	"endDate": '<?=$endDate?>', /* moment().subtract(7, 'day') moment().add(7, 'day') */
@@ -105,10 +103,12 @@ $(function() {
             "<?=$ms[12][l()]?>"
         ],
     	"firstDay": 1
-	},
-    opens: 'left'
+	 },
+    opens: 'left',
+    beforeShowDay: function(date) {
+        return [true, 'css-class-to-highlight'+date, 'tooltipText'];
+    },
   }, function(start, end, label) {
-    // console.log("A new date selection was made: " + start.format('DD-MM-YYY') + ' to ' + end.format('DD-MM-YYY'));
     location.href = "https://batumiguide.ge/<?=l()?>/events/?daterange="+start.format('DD-MM-YYYY')+"@"+end.format('DD-MM-YYYY');
   });
 });

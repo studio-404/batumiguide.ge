@@ -2,6 +2,7 @@
 define('PRODUCTION', FALSE);
 define('START_TIME', microtime(TRUE));
 define('START_MEMORY', memory_get_usage());
+define('WEBSITE_VERSION', '2.0');
 
 if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
     $location = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
