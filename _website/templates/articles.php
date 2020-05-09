@@ -9,7 +9,7 @@
 		<div class="CategoryTitle">
 			<div class="col-sm-12"> 
 				<div class="Icon g-bgred"><i class="fa <?php echo $image2;?>"></i></div>
-				<div class="Title"><?php echo $title;?></div> 
+				<div class="Title"><?php echo $title;?> ( <?=$item_count?> )</div> 
 			</div>
 		</div>
 		<div class="HeaderWidthRight HideMobile">	
@@ -41,7 +41,7 @@
 								<div class="Title">
 									<?php echo $a["title"];?>
 								</div>
-								<div class="Date"><i class="fa fa-clock-o"></i> <?php echo $a["postdate"];?></div>
+								<div class="Date"><i class="fa fa-clock-o"></i> <?php echo $a["postdatestring"];?> - <?php echo $a["expiredatestring"];?></div>
 								<div class="Address"><?php echo $a["address"];?></div>
 							</div> 
 							<div class="LinkButton"><i class="fa fa-angle-right"></i></div>
@@ -64,6 +64,12 @@ $ds = c("day.shortnames");
 <script type="text/javascript">
 $(function() {
   $('input[name="daterange"]').daterangepicker({
+    "beforeShowDay": function(date) {
+      console.log(date);
+      // if (date == myDate) {
+      //   return [true, 'css-class-to-highlight', 'tooltipText'];
+      // }
+    },
     "autoUpdateInput": false,
   	"startDate": '<?=$startDate?>', /* moment().subtract(7, 'day') moment().add(7, 'day') */
   	"endDate": '<?=$endDate?>', /* moment().subtract(7, 'day') moment().add(7, 'day') */

@@ -349,8 +349,13 @@ class Manager_Pages
         
         // search by date
         $seachBydate = "";
-        if(isset($_GET['date'])){
-            $seachBydate = " AND DATE(`postdate`) <= '".strip_tags($_GET['date'])."' AND DATE(`expiredate`) >= '".strip_tags($_GET['date'])."'";
+        if(isset($_GET['daterange'])){
+            $explodeStart = explode("-", $tpl["startDate"]);
+            $explodeEnd = explode("-", $tpl["endDate"]);
+            $startString = $explodeStart[2]."-".$explodeStart[1]."-".$explodeStart[0];
+            $endString = $explodeEnd[2]."-".$explodeEnd[1]."-".$explodeEnd[0];
+
+            $seachBydate = " AND DATE(`postdate`) >= '".$startString."' AND DATE(`expiredate`) <= '".$endString."'";
         }
 
         //Pager: start
@@ -369,7 +374,7 @@ class Manager_Pages
 
         
         //Pager: end
-        $sql = "SELECT * FROM `".c("table.pages")."` WHERE language = '" . l() . "' {$all_news}AND `deleted` = '0' AND visibility = 1".$seachBydate." ORDER BY postdate DESC{$limit};";
+        $sql = "SELECT *, DATE(`postdate`) as postdatestring, DATE(`expiredate`) as expiredatestring FROM `".c("table.pages")."` WHERE language = '" . l() . "' {$all_news}AND `deleted` = '0' AND visibility = 1".$seachBydate." ORDER BY postdate DESC{$limit};";
         $res = db_fetch_all($sql);
 
         $postdatesql = "SELECT `title`, `postdate`, `expiredate` FROM `".c("table.pages")."` WHERE language = '" . l() . "' {$all_news}AND `deleted` = '0' AND visibility = 1;";
