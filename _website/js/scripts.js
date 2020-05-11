@@ -2,15 +2,6 @@
     website: "http://batumiguide.ge/"
 };
 
-$(window).scroll(function() {    
-    //var scroll = $(window).scrollTop();
-   // if (scroll >= 110) {
-   //     $("body").addClass("FixedSmallHeader");
-  //  } else {
-  //      $("body").removeClass("FixedSmallHeader");
-  //  }
-});
-
 
 $(document).ready(function(){	
 	$('.MobileHeaderInput').click(function(e){
@@ -239,34 +230,6 @@ $(document).ready(function() {
 			'container':'body'
 		})
 	})
-
-	//$( function() {
-		//$( "#datepicker" ).datepicker();
-	//});
-
-
-
-	// $('.PriceBoxSlider').slick({
-	// 	infinite: true,
-	// 	dots: true,
-	//   	slidesToShow: 7,
-	//   	slidesToScroll: 7,
-	//   	arrows: false,
-	//   	speed: 1000,
-	//   	responsive: [
-	// 	    {
-	// 	      breakpoint: 480,
-	// 	      settings: {
-	// 	        slidesToShow: 2,
-	// 	        slidesToScroll: 2
-	// 	      }
-	// 	    }
-	// 	    // You can unslick at a given breakpoint now by adding:
-	// 	    // settings: "unslick"
-	// 	    // instead of a settings object
-	// 	  ]
-	// });
-
   
 
 	$('.CategoriesDivSlideClass .row').slick({
@@ -286,9 +249,6 @@ $(document).ready(function() {
 				arrows: false,
 		      }
 		    }
-		    // You can unslick at a given breakpoint now by adding:
-		    // settings: "unslick"
-		    // instead of a settings object
 		  ]
 	});
 	
@@ -333,35 +293,8 @@ $(document).ready(function() {
 		        slidesToScroll: 1,
 		      }
 		    }
-		    // You can unslick at a given breakpoint now by adding:
-		    // settings: "unslick"
-		    // instead of a settings object
 		  ]
 	});
-		
-
-	// if (document.documentElement.clientWidth < 992) { 
-	// 	$('.row').slick({
-	// 		infinite: true,
-	// 		dots: true,
-	// 	  	slidesToShow: 1,
-	// 	  	slidesToScroll: 1,
-	// 	  	arrows: true,
-	// 	  	speed: 1000,  		 
-	// 		responsive: [
-	// 		    {
-	// 		      breakpoint: 480,
-	// 		      settings: {
-	// 		        slidesToShow: 2,
-	// 		        slidesToScroll: 2
-	// 		      }
-	// 		    }
-	// 		    // You can unslick at a given breakpoint now by adding:
-	// 		    // settings: "unslick"
-	// 		    // instead of a settings object
-	// 		  ]
-	// 	});
-	// }
 
 
 	if (document.documentElement.clientWidth < 992) { 
@@ -380,18 +313,9 @@ $(document).ready(function() {
 			        slidesToScroll:3
 			      }
 			    }
-			    // You can unslick at a given breakpoint now by adding:
-			    // settings: "unslick"
-			    // instead of a settings object
 			  ]
 		});
 	} 
-	
-	
-	// $('iframe').load( function() {
-	// 	$('iframe').contents().find("head")
-		  
-	// });
 	
 
 });
