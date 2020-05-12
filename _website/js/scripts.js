@@ -358,3 +358,48 @@ $(document).ready(function() {
     });
     
 });
+
+function ajax(ajaxUrl, queryParams = ""){
+	var lang = document.getElementById("input_lang").value;
+
+	var xhttp = new XMLHttpRequest();
+
+	xhttp.open("POST", "/"+lang+"/?ajax=true"+queryParams, true);
+	xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded; charset=UTF-8');
+	xhttp.send(ajaxUrl);
+
+	return xhttp;
+}
+
+
+function callAjax(page, perpage, total){
+	var loading = $("#loading").val();
+	var storageid = (typeof $("#storageid").val() !== "undefined") ? $("#storageid").val() : 0;
+	var loaded = (typeof $("#loaded").val() !== "undefined") ? $("#loaded").val() : 0;
+	var daterange = (typeof $("#daterange").val() !== "undefined") ? $("#daterange").val() : 0;
+	var catalogtitle = (typeof $("#catalogtitle").val() !== "undefined") ? $("#catalogtitle").val() : 0;
+	$("#loading").val("true");
+	$(".g-gifloader").show();
+
+	if(loading=="false"){
+		var xhttp = ajax("type=loadmoreitems&page="+page+"&storageid="+storageid+"&perpage="+perpage+"&loaded="+loaded+"&total="+total+"&daterange="+daterange+"&catalogtitle="+catalogtitle);
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				var responseText = JSON.parse(this.responseText);
+
+				if(responseText.Error.Code==1){
+					console.log(responseText.Error.Text);
+					$("#loading").val("false");
+				}else{
+					if(responseText.Success.outHtml!=""){
+						$("#loaded").val(responseText.Success.loadedafter);
+						$("#gresults").append(responseText.Success.outHtml);
+						$("#loading").val("false");
+					}
+				}
+
+				$(".g-gifloader").hide();
+			}
+		};
+	}
+}

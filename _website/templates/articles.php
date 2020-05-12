@@ -36,7 +36,7 @@
 	<div class="container">
 		<div class="col-sm-12">
 			<div class="AllEventsDiv ListStyleEvent">
-				<div class="row">
+				<div class="row" id="gresults">
 				<?php foreach($articles as $a) : ?>	                
 					<div class="col-sm-12 g-mobile-padding-right15">
 						<a href="<?php echo href($a["id"]);?>" class="EventItem">
@@ -53,7 +53,13 @@
 					</div>
 				<?php endforeach; ?>
 				</div>	
-
+                <input type="hidden" name="catalogtitle" id="catalogtitle" value="" />
+                <input type="hidden" name="loading" id="loading" value="false" />
+                <input type="hidden" name="loaded" id="loaded" value="<?=c('articles.per_page')?>" />
+                <input type="hidden" name="daterange" id="daterange" value="<?=(isset($_GET["daterange"])) ? htmlentities($_GET["daterange"]) : ""?>" />
+                <div class="g-gifloader" style="margin: 20px 0; width: 100%; clear: both; text-align: center;">
+                    <img src="img/loader2.gif" alt="" width="100" align="center" style="margin: 0 auto; width:100px;" alt="" />
+                </div>
 			</div>
 		</div>
 	</div>
@@ -112,4 +118,14 @@ $(function() {
     location.href = "https://batumiguide.ge/<?=l()?>/events/?daterange="+start.format('DD-MM-YYYY')+"@"+end.format('DD-MM-YYYY');
   });
 });
+</script>
+<script type="text/javascript">
+var perpage = parseInt("<?=(int)c('articles.per_page')?>");
+var total = parseInt("<?=(int)$item_count?>");
+
+$(window).scroll(function() {
+    if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+        callAjax('articles', perpage, total);
+    }
+}); 
 </script>

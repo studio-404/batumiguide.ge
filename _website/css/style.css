@@ -3454,6 +3454,10 @@ a.Dagvekontaqtet:hover {
 	display: none;
 }
 
+.g-gifloader{
+	display: none;
+}
+
 @media (max-width: 992px){
 	.g-datepicker-mobile{
 		float: left !important;

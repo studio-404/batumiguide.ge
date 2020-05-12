@@ -103,7 +103,7 @@ $c['events.page_count'] = 10;
 $c['list.per_page'] = 12;
 $c['list.page_count'] = 10;
 
-$c['catalog.per_page'] = 2500;
+$c['catalog.per_page'] = 12;
 $c['catalog.page_count'] = 15;
 
 $c['photos.per_page'] = 3;

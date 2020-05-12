@@ -577,6 +577,7 @@ class Manager_Pages
             }
             return;
         }
+
         if ($this->storage->section['menutype'] == 0)
             return ($this->storage->content = NULL);
 
@@ -613,7 +614,7 @@ class Manager_Pages
                         OR meta_keys LIKE '%{$query}%'
                     )";
             }
-            $res = "SELECT * from `".c("table.catalogs")."` WHERE menuid IN (".implode(",", $mtypes).") and visibility=1 and deleted=0 and language = '" . l() . "'".$search." order by recommended DESC, '".(isset($_GET['date']) ? 'postdate' : 'id')."' desc";
+            $res = "SELECT (SELECT COUNT(id) from `".c("table.catalogs")."` WHERE menuid IN (".implode(",", $mtypes).") and visibility=1 and deleted=0 and language = '" . l() . "'".$search.") as counted, catalogs.* from `".c("table.catalogs")."` WHERE menuid IN (".implode(",", $mtypes).") and visibility=1 and deleted=0 and language = '" . l() . "'".$search." order by recommended DESC, '".(isset($_GET['date']) ? 'postdate' : 'id')."' desc".$limit;
 
             $res = db_fetch_all($res);
             // echo "<pre>";
@@ -629,6 +630,7 @@ class Manager_Pages
             $catalog["catalogs"] = $res;
 
             $catalog["parents"] = $res_c;
+            $catalog["storageid"] = $this->storage->section['id'];
 
             if($this->storage->section["template"]=='')
                 $this->storage->content = template('catalogs', $catalog);
@@ -723,7 +725,7 @@ class Manager_Pages
             }
             /* new filters END*/
 
-            $sql = "SELECT * FROM `".c("table.catalogs")."` WHERE menuid = {$this->storage->section['menutype']} and visibility=1 and deleted=0 and language = '" . l() . "' ".$filter." order by recommended DESC, id desc"."{$limit}";
+            $sql = "SELECT (SELECT COUNT(id) FROM `catalogs` WHERE menuid = {$this->storage->section['menutype']} and visibility=1 and deleted=0 and language = '" . l() . "' ".$filter.") as counted, `catalogs`.* FROM `catalogs` WHERE menuid = {$this->storage->section['menutype']} and visibility=1 and deleted=0 and language = '" . l() . "' ".$filter." order by recommended DESC, id desc"."{$limit}";
             // echo $sql; 
             $res = db_fetch_all($sql);
 
@@ -733,6 +735,7 @@ class Manager_Pages
             $catalog['page_max'] = $page_max;
 
             $catalog["items"] = $res;
+            $catalog["storageid"] = $this->storage->section['id'];
             
             if($this->storage->section["template"]=='')
                 $this->storage->content = template('catalog', $catalog);

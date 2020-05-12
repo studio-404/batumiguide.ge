@@ -19,6 +19,128 @@
         $type = $_POST["type"];
 
         switch ($type) {
+            case 'loadmoreitems':
+                $sql = "";
+                $loadedafter = 0;
+                $outHtml = "";
+                if(
+                    !isset($_POST["page"]) && 
+                    !isset($_POST["perpage"]) && 
+                    !isset($_POST["loaded"]) && 
+                    !isset($_POST["total"]) 
+                ){
+                    $errorCode = 1;
+                    $successCode = 0;
+                    $errorText = l("error");                   
+                    $successText = "";
+                }else{
+                    $limit = " LIMIT ".(int)$_POST["loaded"].",".(int)$_POST["perpage"];
+                    $loadedafter = (int)$_POST["loaded"] + (int)$_POST["perpage"];
+
+                    if($_POST["page"]=="articles"){
+                        $seachBydate = "";
+                        if(isset($_POST['daterange'])){
+                          $daterange = explode("@", $_POST["daterange"]);
+                          if(
+                            isset($daterange[0]) && 
+                            isset($daterange[1]) && 
+                            g_validateDate($daterange[0], 'd-m-Y') && 
+                            g_validateDate($daterange[1], 'd-m-Y')
+                          ){
+                            $startDate = $daterange[0];
+                            $endDate = $daterange[1];
+
+                            $explodeStart = explode("-", $startDate);
+                            $explodeEnd = explode("-", $endDate);
+                            $startString = $explodeStart[2]."-".$explodeStart[1]."-".$explodeStart[0];
+                            $endString = $explodeEnd[2]."-".$explodeEnd[1]."-".$explodeEnd[0];
+
+                            $seachBydate = " AND DATE(`postdate`) >= '".$startString."' AND DATE(`expiredate`) <= '".$endString."'";
+                          }                            
+                        }
+
+                        $sql = "SELECT * FROM pages WHERE language = '" . l() . "' AND `deleted` = '0' AND visibility = 1 AND menuid=17".$seachBydate." ORDER BY postdate DESC".$limit;
+                        $fetchAll = db_fetch_all($sql);
+                        
+                        foreach($fetchAll as $a) :            
+                            $img = ($a["image1"]!="") ? $a["image1"]:"_website/img/article1.jpg";
+
+                            $outHtml .= "<div class=\"col-sm-12 g-mobile-padding-right15\">";
+                            $outHtml .= "<a href=\"".href($a["id"])."\" class=\"EventItem\">";
+                            $outHtml .= "<div class=\"Image\">";
+                            $outHtml .= "<img src=\"".$img."\"/>";
+                            $outHtml .= "</div>";
+                            $outHtml .= "<div class=\"Info\">";
+                            $outHtml .= "<div class=\"Title\">";
+                            $outHtml .= $a["title"];
+                            $outHtml .= "</div>";
+                            $outHtml .= "<div class=\"Date\">";
+                            $outHtml .= "<i class=\"fa fa-clock-o\"></i>";
+                            $outHtml .= $a["postdate"]; 
+                            $outHtml .= "</div>";
+                            $outHtml .= "<div class=\"Address\">".$a["address"]."</div>";
+                            $outHtml .= "</div>";
+                            $outHtml .= "<div class=\"LinkButton\"><i class=\"fa fa-angle-right\"></i></div>";
+                            $outHtml .= "</a>";
+                            $outHtml .= "</div>";
+                        endforeach;
+                    }else if($_POST["page"]=="catalog"){
+                        $menuid = (int)$_POST["storageid"];
+                        $sql = "SELECT * from `".c("table.catalogs")."` WHERE menuid=".$menuid." and visibility=1 and deleted=0 and language = '" . l() . "' order by recommended DESC, id desc".$limit;
+
+                        $fetchAll = db_fetch_all($sql);
+
+                        foreach($fetchAll as $item) :  
+                            $link = href($menuid, array(), l(), $item['id']);  
+                            $img = ($item['image1']!=NULL) ? $item['image2'] : WEBSITE.'/img/noimage.jpg';      
+                            $imglogo = ($item['image1']!=NULL) ? $item['image1'] : WEBSITE.'/img/noimage.jpg';       
+                            // $img = ($item["image1"]!="") ? $item["image1"]:"_website/img/article1.jpg";
+
+                            $outHtml .= "<div class=\"col-sm-2\">";
+                            $outHtml .= "<a href=\"".$link."\" class=\"Item\">";
+                            $outHtml .= "<div class=\"Image\">";
+                            $outHtml .= "<img src=\"".$img."\" title=\"".$item['title']."\" />";
+                            $outHtml .= "</div>";
+
+                            $outHtml .= "<div class=\"Info\">";
+                            $outHtml .= "<div class=\"CompanyLogo\">";
+                            $outHtml .= "<img src=\"".$imglogo."\" alt=\"\" />";
+                            $outHtml .= "</div>";
+                            $outHtml .= "<div class=\"Category\">".htmlentities(strip_tags($_POST["catalogtitle"]))."</div>";
+                            $outHtml .= "<div class=\"Title\">".$item['title']."</div>";
+                            $outHtml .= "<div class=\"Address\">".$item['address']."</div>";
+                            $outHtml .= "<div class=\"Time\">".$item['SatSun']."</div>";
+                            $outHtml .= "</div>";
+                            if($item["recommended"]==1):
+                                $outHtml .= "<div class=\"g-recommended\">Recommended</div>";
+                            endif;
+                            $outHtml .= "</a>";
+                            $outHtml .= "</div>";
+                            
+                        endforeach;
+                    }
+
+                    $errorCode = 0;
+                    $successCode = 1;
+                    $errorText = "";                   
+                    $successText = l("welldone");
+                }
+
+                $out = array(
+                    "Error" => array(
+                        "Code"=>$errorCode, 
+                        "Text"=>$errorText,
+                        "Details"=>""
+                    ),
+                    "Success"=>array(
+                        "Code"=>$successCode, 
+                        "Text"=>$successText,
+                        "loadedafter"=>$loadedafter,
+                        "outHtml"=>$outHtml,
+                        "Details"=>""
+                    )
+                );
+                break;
             case 'searchMap':
                 $sql = "";
                 if(
