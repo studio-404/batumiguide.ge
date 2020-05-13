@@ -3263,6 +3263,23 @@ a.Dagvekontaqtet:hover {
 	border-color: #ff353c;
 }
 
+.hasEvents{
+	position: relative;
+}
+
+.hasEvents:after{
+	content: '';
+	margin: 0;
+	padding: 0;
+	width: 2px;
+	height: 2px;
+	background-color: red;
+	position: absolute;
+	z-index: 10000;
+	bottom: 10px;
+	right: 8px;
+}
+
 @media (max-width: 992px){
 	.g-datepicker-mobile{
 		float: left !important;

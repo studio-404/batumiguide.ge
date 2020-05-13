@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="_website/css/calendar.css">
 
+
 <div class="SmallHeaderInside g-border-top-grey" style="margin-bottom: 0px;">
 	<div class="container"> 			
 		<div class="CategoryTitle">
@@ -72,11 +73,44 @@ $ms = c("month.names");
 $ds = c("day.shortnames"); 
 ?>
 <script type="text/javascript">
+function dateCheck(from,to,check) {
+    var fDate,lDate,cDate;
+    fDate = Date.parse(from);
+    lDate = Date.parse(to);
+    cDate = Date.parse(check);
+
+    if((cDate <= lDate && cDate >= fDate)) {
+        return true;
+    }
+    return false;
+}
+
+function getDates(startDate, stopDate) {
+    var dateArray = [];
+    var currentDate = moment(startDate);
+    var stopDate = moment(stopDate);
+    while (currentDate <= stopDate) {
+        dateArray.push( moment(currentDate).format('YYYY-MM-DD') )
+        currentDate = moment(currentDate).add(1, 'days');
+    }
+    return dateArray;
+}
+
 $(function() {
+  var gdates = <?=json_encode($gdates)?>;
+  var datesArray = new Array();
+  for(var y = 0; y < gdates.length; y++){
+    var allDates = getDates(gdates[y].startdate, gdates[y].enddate);
+    for(var i = 0; i <allDates.length; i++){
+        datesArray.push(allDates[i]);
+    }
+  }
+
   $('input[name="daterange"], input[name="daterangemobile"]').daterangepicker({
     isCustomDate: function(date) { 
-        if(date.format("YYYY-MM-DD") == "2020-05-10"){
-            return "heyeth0";
+        var check = date.format("YYYY-MM-DD");
+        if(datesArray.indexOf(check) != -1){
+            return "hasEvents";
         }
     }, 
     "autoUpdateInput": false,

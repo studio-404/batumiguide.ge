@@ -352,18 +352,19 @@ class Manager_Pages
         if(isset($_GET['daterange'])){
             $explodeStart = explode("-", $tpl["startDate"]);
             $explodeEnd = explode("-", $tpl["endDate"]);
-            $startString = $explodeStart[2]."-".$explodeStart[1]."-".$explodeStart[0];
-            $endString = $explodeEnd[2]."-".$explodeEnd[1]."-".$explodeEnd[0];
+            $startString = $explodeStart[2]."-".$explodeStart[1]."-".$explodeStart[0]." 00:00:00";
+            $endString = $explodeEnd[2]."-".$explodeEnd[1]."-".$explodeEnd[0]." 00:00:00";
 
-            $seachBydate = " AND DATE(`postdate`) >= '".$startString."' AND DATE(`expiredate`) <= '".$endString."'";
+            $seachBydate = " AND ((DATE(`postdate`)>='".$startString."' AND DATE(`postdate`)<='".$endString."') OR (DATE(`expiredate`)>='".$startString."' AND DATE(`expiredate`)<='".$endString."'))";
         }
 
         //Pager: start
         $page = abs(get('page', 1));
         $per_page = c('articles.per_page');
         $limit = " LIMIT " . (($page - 1) * $per_page) . ",{$per_page}";
-        $count = "SELECT COUNT(*) AS cnt FROM `".c("table.pages")."` WHERE language = '" . l() . "' {$all_news}AND visibility = 1 AND deleted = 0".$seachBydate." ORDER BY postdate DESC;";
+        $count = "SELECT COUNT(*) AS cnt FROM `".c("table.pages")."` WHERE language = '" . l() . "' {$all_news}AND visibility = 1 AND deleted = 0".$seachBydate." AND `postdate`!='0000-00-00 00:00:00' AND `expiredate`!='0000-00-00 00:00:00' ORDER BY postdate DESC;";
         $count = db_fetch($count);
+
         $count = empty($count) ? 0 : $count['cnt'];
         $page_max = ceil($count / $per_page);
         
@@ -374,14 +375,39 @@ class Manager_Pages
 
         
         //Pager: end
-        $sql = "SELECT *, DATE(`postdate`) as postdatestring, DATE(`expiredate`) as expiredatestring FROM `".c("table.pages")."` WHERE language = '" . l() . "' {$all_news}AND `deleted` = '0' AND visibility = 1".$seachBydate." ORDER BY postdate DESC{$limit};";
+        $sql = "SELECT *, DATE(`postdate`) as postdatestring, DATE(`expiredate`) as expiredatestring FROM `".c("table.pages")."` WHERE language = '" . l() . "' {$all_news}AND `deleted` = '0' AND visibility = 1".$seachBydate." AND `postdate`!='0000-00-00 00:00:00' AND `expiredate`!='0000-00-00 00:00:00' ORDER BY postdate DESC{$limit};";
         $res = db_fetch_all($sql);
+        // echo $sql;
+        // exit;
+
+        /* All Events START */
+        $gselect = "SELECT `postdate` as startdate, `expiredate` as enddate FROM `".c("table.pages")."` WHERE language = '" . l() . "' {$all_news}AND `deleted` = '0' AND visibility = 1 AND `postdate`!='0000-00-00 00:00:00' AND `expiredate`!='0000-00-00 00:00:00' ORDER BY postdate DESC;";
+        $gfetch = db_fetch_all($gselect);
+        $gdates = array();
+        $i = 0;
+        foreach ($gfetch as $k => $v) {
+            $expl = preg_match('/\d{4}-\d{2}-\d{2}/', $v["startdate"], $start);
+            $expl = preg_match('/\d{4}-\d{2}-\d{2}/', $v["enddate"], $end);
+
+            // $ex1 = explode("-", $start[0]);
+            // $ex2 = explode("-", $end[0]);
+            // $gdates[$i]["startdate"] = $ex1[2]."/".$ex1[1]."/".$ex1[0];
+            // $gdates[$i]["enddate"] = $ex2[2]."/".$ex2[1]."/".$ex2[0];
+
+            $gdates[$i]["startdate"] = $start[0];
+            $gdates[$i]["enddate"] = $end[0];
+
+            $i++;
+        }
+
+        /* All Events END */
 
         $postdatesql = "SELECT `title`, `postdate`, `expiredate` FROM `".c("table.pages")."` WHERE language = '" . l() . "' {$all_news}AND `deleted` = '0' AND visibility = 1;";
         $postdateres = db_fetch_all($postdatesql);
 
         $tpl['articles'] = $res;
         $tpl['postdates'] = $postdateres;
+        $tpl['gdates'] = $gdates;
 
         if($this->storage->section["template"]=='')
             $this->storage->content = template('articles', $tpl);
