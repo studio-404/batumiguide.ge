@@ -1807,229 +1807,6 @@ a.Dagvekontaqtet:hover {
 	color:#ff353c;
 }
 
-
-
-
-
-/*
-.EventItem {
-	padding:25px 0px;
-	display:inline-block;
-	float:left;
-	width:100%; 
-	position:relative; 
-}
-.EventItem:hover{ 
-}
-
-	
-.EventItem .Image {
-	width:100px;
-	height:100px;
-	border-radius:100%;
-	display:inline-block;
-	float:left;
-}
-.EventItem .Image img {
-	border-radius:100%;
-	width:100%;
-	height:100%;	
-}
-.EventItem .TitleAndCategory {
-	display:inline-block;
-	float:left;
-	padding-left:40px;
-	width:500px;
-	padding-top:22px;
-}
-.EventItem .TitleAndCategory label {
-	font-family:BPGMrgvlovani;
-	color:#000;
-	font-weight:bold;
-	text-transform:uppercase;
-	font-size:17px;
-	margin:0;
-	margin-bottom:3px;
-}
-.EventItem .TitleAndCategory span {
-	width:100%;
-	display:inline-block;
-	color:#ff353c;
-	font-weight:bold;
-}
-
-.EventItem .DateAndAddress {
-	display:inline-block;
-	float:left;
-	padding-top:25px;
-}
-.EventItem .DateAndAddress li {
-	width:100%;
-	list-style:none;
-	font-family:BPGMrgvlovani;
-	color:#4c4c4c; 
-	font-weight:bold;
-	font-size:13px;
-	margin-bottom:6px;
-}
-.EventItem .DateAndAddress li span.Time {
-	width:12px;
-	height:17px;
-	background:url('../img/time_black.png') no-repeat;
-	background-size:12px 12px;
-	background-position:0 3px;
-	display:inline-block;
-	position:relative;
-	top:4px;
-	margin-right:5px;
-}
-.EventItem .DateAndAddress li span.marker {
-	width:12px;
-	height:17px;
-	background:url('../img/marker.png') no-repeat;
-	background-size:12px 12px;
-	background-position:0 3px;
-	display:inline-block;
-	position:relative;
-	top:4px;
-	margin-right:5px;
-}
-.EventItem .TicketButton {
-	border:solid #d9dddf 1px;
-	display:inline-block;
-	border-radius:30px;
-	padding:11px;
-	color:#666666;
-	font-family:BPGMrgvlovani;
-	text-transform:uppercase;
-	font-weight:bold;
-	text-decoration:none;
-	float:right;
-	margin-top:25px;
-	width:120px;
-	text-align:center;
-}
-.EventItem .TicketButton span {
-	display:block;
-}
-.EventItem .TicketButton i {
-	display:none;
-	margin:0;
-	font-style:normal;
-} 
-.EventItem:hover {
-	background:#ff353c;
-}
-.EventItem:hover:after {
-	content:'';
-	background:#ff353c;
-	width:30px;
-	height:100%;
-	position:absolute;
-	left:-30px;
-	top:0;
-}
-.EventItem:hover:before {
-	content:'';
-	background:#ff353c;
-	width:1000%;
-	height:100%;
-	position:absolute;
-	left:100%;
-	top:0;
-}
-.EventItem:hover .TitleAndCategory label,
-.EventItem:hover .TitleAndCategory span,
-.EventItem:hover .DateAndAddress li {
-	color:#fff;
-}
-.EventItem:hover .DateAndAddress li span.Time {
-	background:url('../img/time_white.png') no-repeat;
-	background-size:12px 12px;
-	background-position:0 3px
-}
-.EventItem:hover .DateAndAddress li span.marker {
-	background:url('../img/marker_white.png') no-repeat;
-	background-size:12px 14px;
-	background-position:0 1px
-}
-.EventItem:hover .TicketButton {
-	background:#ffd400;
-	border:solid #ffd400 1px;
-	color:#fff;
-}
-.EventItem:hover .TicketButton span {
-	display:none;
-}
-.EventItem:hover .TicketButton i {
-	display:block;
-} 
-
-
-
-
-.ListStyleEvent .EventItem {
-	width:25%;
-	display:inline-block;
-	float:left;
-	text-align:center;
-	margin-bottom:10px;
-}
-.ListStyleEvent.AllEventsDiv .EventItem:after,
-.ListStyleEvent.AllEventsDiv .EventItem:before {
-	display:none !important
-}
-.ListStyleEvent .EventItem .TitleAndCategory {
-	width:100%;
-	padding-left:0	
-}
-.ListStyleEvent .EventItem .Image {
-	position:relative;
-	left:50%;
-	margin-left:-70px;
-	width:140px;
-	height:140px;
-}
-.ListStyleEvent .EventItem .TicketButton {
-
-}
-.ListStyleEvent .EventItem .DateAndAddress {
-	width:100%;
-}
-.ListStyleEvent .EventItem .TicketButton {
-	position:relative;
-	left:50%;
-	margin-left:-60px;
-	float:left;
-}
-.ListStyleEvent .EventItem .TitleAndCategory label {
-	height:50px;
-}
-
-.ListDivButton {
-	color:#3a3a3b;
-	font-size:16px;
-	display:inline-block;
-	margin-right:10px;
-	cursor:pointer;
-}
-.ViewDivButton {
-	color:#3a3a3b;
-	font-size:16px;
-	display:inline-block;
-	cursor:pointer;
-}
-
-.ListDivButton:hover,
-.ListDivButton.active,
-.ViewDivButton:hover,
-.ViewDivButton.active {
-	color:#ff353c;
-}
-
-*/
-
-
 .FixedSmallHeader .SmallHeaderInside {
 	position:fixed;
 	top:0;
@@ -3456,6 +3233,34 @@ a.Dagvekontaqtet:hover {
 
 .g-gifloader{
 	display: none;
+}
+
+.searchKey_s{
+	transition-property: border-color;
+	transition-duration: 600ms;
+	transition-timing-function: ease-in-out;
+}
+
+.searchKey_s:hover{
+	border-color: #ff353c;
+}
+
+.searchKey_s:focus{
+	border-color: #ff353c;
+}
+
+.g-picker{
+	transition-property: border-color;
+	transition-duration: 600ms;
+	transition-timing-function: ease-in-out;
+}
+
+.g-picker:hover{
+	border-color: #ff353c;
+}
+
+.g-picker:focus{
+	border-color: #ff353c;
 }
 
 @media (max-width: 992px){

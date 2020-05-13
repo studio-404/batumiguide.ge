@@ -74,6 +74,11 @@ $ds = c("day.shortnames");
 <script type="text/javascript">
 $(function() {
   $('input[name="daterange"], input[name="daterangemobile"]').daterangepicker({
+    isCustomDate: function(date) { 
+        if(date.format("YYYY-MM-DD") == "2020-05-10"){
+            return "heyeth0";
+        }
+    }, 
     "autoUpdateInput": false,
   	"startDate": '<?=$startDate?>', /* moment().subtract(7, 'day') moment().add(7, 'day') */
   	"endDate": '<?=$endDate?>', /* moment().subtract(7, 'day') moment().add(7, 'day') */
